@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{1315BADC-5285-4B5D-9045-6A9B41469E54}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Guanajoven.iOS</RootNamespace>
+    <AssemblyName>Guanajoven.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>27646</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.224\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.224\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.224\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.224\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Mobile">
+      <HintPath>..\Components\xamarin.mobile-0.7.7\lib\ios-unified\Xamarin.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="BTProgressHUD">
+      <HintPath>..\Components\btprogresshud-1.20\lib\ios-unified\BTProgressHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Auth.iOS">
+      <HintPath>..\Components\xamarin.auth-1.2.3.1\lib\ios-unified\Xamarin.Auth.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="WebP.Touch">
+      <HintPath>..\packages\WebP.Touch.1.0.3\lib\Xamarin.iOS10\WebP.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.9\lib\Xamarin.iOS10\FFImageLoading.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Platform">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.9\lib\Xamarin.iOS10\FFImageLoading.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Transformations">
+      <HintPath>..\packages\Xamarin.FFImageLoading.Transformations.2.2.9\lib\Xamarin.iOS10\FFImageLoading.Transformations.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Forms">
+      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.9\lib\Xamarin.iOS10\FFImageLoading.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Forms.Touch">
+      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.9\lib\Xamarin.iOS10\FFImageLoading.Forms.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Guanajoven\Guanajoven.csproj">
+      <Project>{FB267C11-3F00-4E38-8A9A-D43B641037D4}</Project>
+      <Name>Guanajoven</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Renders\" />
+    <Folder Include="Providers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renders\BasePageRenderer.cs" />
+    <Compile Include="Providers\ProgressView.cs" />
+    <Compile Include="Renders\BorderlessEntryImpl.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ayuda.png" />
+    <BundleResource Include="Resources\background_img2.jpg" />
+    <BundleResource Include="Resources\background1.jpg" />
+    <BundleResource Include="Resources\background2.jpg" />
+    <BundleResource Include="Resources\background3.jpg" />
+    <BundleResource Include="Resources\background4.jpg" />
+    <BundleResource Include="Resources\bubble_in.9.png" />
+    <BundleResource Include="Resources\bubble_out.9.png" />
+    <BundleResource Include="Resources\calendario.jpg" />
+    <BundleResource Include="Resources\cf.png" />
+    <BundleResource Include="Resources\chat_grey.png" />
+    <BundleResource Include="Resources\checkin.png" />
+    <BundleResource Include="Resources\conv1.png" />
+    <BundleResource Include="Resources\conv2.png" />
+    <BundleResource Include="Resources\conv3.png" />
+    <BundleResource Include="Resources\convocatoria_impulsojoven.png" />
+    <BundleResource Include="Resources\convocatoria.png" />
+    <BundleResource Include="Resources\evento.png" />
+    <BundleResource Include="Resources\facebook_logo.png" />
+    <BundleResource Include="Resources\facebook.png" />
+    <BundleResource Include="Resources\feliz.png" />
+    <BundleResource Include="Resources\flecha_morada.png" />
+    <BundleResource Include="Resources\flecha_naranja.png" />
+    <BundleResource Include="Resources\google_logo.png" />
+    <BundleResource Include="Resources\ic_account_box_black_24dp.png" />
+    <BundleResource Include="Resources\ic_announcement_white_36dp.png" />
+    <BundleResource Include="Resources\ic_arrow_back_blue_24dp.png" />
+    <BundleResource Include="Resources\ic_arrow_back_blue_36dp.png" />
+    <BundleResource Include="Resources\ic_arrow_back_white_24dp.png" />
+    <BundleResource Include="Resources\ic_arrow_back_white_36dp.png" />
+    <BundleResource Include="Resources\ic_cake_black_24dp.png" />
+    <BundleResource Include="Resources\ic_cake_pink_200_24dp.png" />
+    <BundleResource Include="Resources\ic_cake_pink_500_24dp.png" />
+    <BundleResource Include="Resources\ic_call.png" />
+    <BundleResource Include="Resources\ic_chat_white_36dp.png" />
+    <BundleResource Include="Resources\ic_close_white_24dp.png" />
+    <BundleResource Include="Resources\ic_confirmation_number_black_24dp.png" />
+    <BundleResource Include="Resources\ic_date_range_black_24dp.png" />
+    <BundleResource Include="Resources\ic_description_32_px.png" />
+    <BundleResource Include="Resources\ic_direccion.png" />
+    <BundleResource Include="Resources\ic_doc-web.png" />
+    <BundleResource Include="Resources\ic_email_black_24dp.png" />
+    <BundleResource Include="Resources\ic_email.png" />
+    <BundleResource Include="Resources\ic_event_available_white_36dp.png" />
+    <BundleResource Include="Resources\ic_event_white_36dp.png" />
+    <BundleResource Include="Resources\ic_exercise.png" />
+    <BundleResource Include="Resources\ic_facebook.png" />
+    <BundleResource Include="Resources\ic_group_white_36dp.png" />
+    <BundleResource Include="Resources\ic_keyboard_arrow_left_white_24dp.png" />
+    <BundleResource Include="Resources\ic_keyboard_arrow_up_white_24dp.png" />
+    <BundleResource Include="Resources\ic_menu_white_18dp.png" />
+    <BundleResource Include="Resources\ic_menu_white_24dp.png" />
+    <BundleResource Include="Resources\ic_menu_white_36dp.png" />
+    <BundleResource Include="Resources\ic_notificacion_64_px.png" />
+    <BundleResource Include="Resources\ic_pdf-web.png" />
+    <BundleResource Include="Resources\ic_person_black_24dp.png" />
+    <BundleResource Include="Resources\ic_person_white_36dp.png" />
+    <BundleResource Include="Resources\ic_phone_black_24dp.png" />
+    <BundleResource Include="Resources\ic_place_black_24dp.png" />
+    <BundleResource Include="Resources\ic_place_grey_600_24dp.png" />
+    <BundleResource Include="Resources\ic_place_white_24dp.png" />
+    <BundleResource Include="Resources\ic_place_white_36dp.png" />
+    <BundleResource Include="Resources\ic_region_32_px.png" />
+    <BundleResource Include="Resources\ic_region_64_px.png" />
+    <BundleResource Include="Resources\ic_twitter.png" />
+    <BundleResource Include="Resources\ic_unknow-web.png" />
+    <BundleResource Include="Resources\ic_water.png" />
+    <BundleResource Include="Resources\ic_wc_black_24dp.png" />
+    <BundleResource Include="Resources\ic_work_black_24dp.png" />
+    <BundleResource Include="Resources\ic_xls-web.png" />
+    <BundleResource Include="Resources\img1.jpg" />
+    <BundleResource Include="Resources\img2.jpg" />
+    <BundleResource Include="Resources\instagram.png" />
+    <BundleResource Include="Resources\login_background.jpg" />
+    <BundleResource Include="Resources\logo_gto.png" />
+    <BundleResource Include="Resources\logo.png" />
+    <BundleResource Include="Resources\logomin.png" />
+    <BundleResource Include="Resources\peke_slide2.jpg" />
+    <BundleResource Include="Resources\placeholder.png" />
+    <BundleResource Include="Resources\plandes.png" />
+    <BundleResource Include="Resources\plus.png" />
+    <BundleResource Include="Resources\publicidad1.jpg" />
+    <BundleResource Include="Resources\publicidad2.jpg" />
+    <BundleResource Include="Resources\qr_white.png" />
+    <BundleResource Include="Resources\qr.png" />
+    <BundleResource Include="Resources\servicios.png" />
+    <BundleResource Include="Resources\slide1.png" />
+    <BundleResource Include="Resources\slide2.png" />
+    <BundleResource Include="Resources\slide3.png" />
+    <BundleResource Include="Resources\slide4.png" />
+    <BundleResource Include="Resources\slide5.png" />
+    <BundleResource Include="Resources\slide6.png" />
+    <BundleResource Include="Resources\slide7.png" />
+    <BundleResource Include="Resources\slide8.png" />
+    <BundleResource Include="Resources\slide9.png" />
+    <BundleResource Include="Resources\triste.png" />
+    <BundleResource Include="Resources\twitter.png" />
+    <BundleResource Include="Resources\water.jpg" />
+    <BundleResource Include="Resources\youtube.png" />
+    <BundleResource Include="Resources\socialmedia.png" />
+    <BundleResource Include="Resources\info.png" />
+    <BundleResource Include="Resources\skyline.png" />
+    <BundleResource Include="Resources\chat.png" />
+    <BundleResource Include="Resources\notificacion.png" />
+    <BundleResource Include="Resources\convocatorias.png" />
+    <BundleResource Include="Resources\calendar.png" />
+    <BundleResource Include="Resources\event.png" />
+    <BundleResource Include="Resources\turn-on.png" />
+    <BundleResource Include="Resources\code.png" />
+    <BundleResource Include="Resources\profile.png" />
+    <BundleResource Include="Resources\home.png" />
+    <BundleResource Include="Resources\backlogo.png" />
+    <BundleResource Include="Resources\infowhite.png" />
+    <BundleResource Include="Resources\profilemenu.png" />
+    <BundleResource Include="Resources\eventosmenu.png" />
+    <BundleResource Include="Resources\checkmenu.png" />
+    <BundleResource Include="Resources\convocatoriasmenu.png" />
+    <BundleResource Include="Resources\redesoscialesmenu.png" />
+    <BundleResource Include="Resources\chatmenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="xamarin.mobile">
+      <Version>0.7.7</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="btprogresshud">
+      <Version>1.20</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamarin.auth">
+      <Version>1.2.3.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+</Project>

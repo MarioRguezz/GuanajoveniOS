@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FB267C11-3F00-4E38-8A9A-D43B641037D4}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UseMSBuildEngine>true</UseMSBuildEngine>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Guanajoven</RootNamespace>
+    <AssemblyName>Guanajoven</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App.xaml" />
+    <EmbeddedResource Include="GuanajovenPage.xaml" />
+    <EmbeddedResource Include="ContentPages\Login\WelcomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentPages\Login\RootPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentPages\Login\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentPages\Login\SignUpPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentPages\Login\ForgotPassword.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentPages\Menu\DrawerListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentPages\Home\MasterHomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentPages\Profile\ProfilePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentPages\GuanajovenCode\GuanajovenCodePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentPages\Event\EventsView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentPages\Call\CallPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentPages\Calendar\CalendarPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentPages\Notifications\NotificationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentPages\SocialMedia\SocialMediaPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentPages\ChatPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentPages\Region\RegionPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentPages\About\AboutPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContentPages\Home\AdvertisingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GuanajovenPage.xaml.cs">
+      <DependentUpon>GuanajovenPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ContentPages\Login\WelcomePage.xaml.cs">
+      <DependentUpon>WelcomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Providers\IProgress.cs" />
+    <Compile Include="Providers\IValidUrl.cs" />
+    <Compile Include="ContentPages\BasePage.cs" />
+    <Compile Include="ContentPages\Login\RootPage.xaml.cs">
+      <DependentUpon>RootPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentPages\Data\Properties\PropertiesManager.cs" />
+    <Compile Include="ContentPages\Data\Models\Usuario.cs" />
+    <Compile Include="ContentPages\Login\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentPages\Login\SignUpPage.xaml.cs">
+      <DependentUpon>SignUpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomViews\BorderlessEntry.cs" />
+    <Compile Include="ContentPages\Login\ForgotPassword.xaml.cs">
+      <DependentUpon>ForgotPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentPages\Menu\DrawerListPage.xaml.cs">
+      <DependentUpon>DrawerListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentPages\Home\MasterHomePage.xaml.cs">
+      <DependentUpon>MasterHomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentPages\Home\HomeDrawerPage.cs" />
+    <Compile Include="ContentPages\Profile\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentPages\GuanajovenCode\GuanajovenCodePage.xaml.cs">
+      <DependentUpon>GuanajovenCodePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentPages\Event\EventsView.xaml.cs">
+      <DependentUpon>EventsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentPages\Call\CallPage.xaml.cs">
+      <DependentUpon>CallPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentPages\Calendar\CalendarPage.xaml.cs">
+      <DependentUpon>CalendarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentPages\Notifications\NotificationPage.xaml.cs">
+      <DependentUpon>NotificationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentPages\SocialMedia\SocialMediaPage.xaml.cs">
+      <DependentUpon>SocialMediaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentPages\ChatPage.xaml.cs">
+      <DependentUpon>ChatPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentPages\Region\RegionPage.xaml.cs">
+      <DependentUpon>RegionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentPages\About\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentPages\Home\AdvertisingPage.xaml.cs">
+      <DependentUpon>AdvertisingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ContentPages\Data\Services\Config.cs" />
+    <Compile Include="ContentPages\Data\Services\ClientGuanajoven.cs" />
+    <Compile Include="ContentPages\Data\Models\CapacidadDiferente.cs" />
+    <Compile Include="ContentPages\Data\Models\CodigoGuanajoven.cs" />
+    <Compile Include="ContentPages\Data\Models\Convocatoria.cs" />
+    <Compile Include="ContentPages\Data\Models\DatosUsuario.cs" />
+    <Compile Include="ContentPages\Data\Models\Documento.cs" />
+    <Compile Include="ContentPages\Data\Models\Estado.cs" />
+    <Compile Include="ContentPages\Data\Models\Evento.cs" />
+    <Compile Include="ContentPages\Data\Models\Lugar.cs" />
+    <Compile Include="ContentPages\Data\Models\Login.cs" />
+    <Compile Include="ContentPages\Data\Models\Formato.cs" />
+    <Compile Include="ContentPages\Data\Models\IdiomaAdicional.cs" />
+    <Compile Include="ContentPages\Data\Models\Genero.cs" />
+    <Compile Include="ContentPages\Data\Models\UsuarioTweet.cs" />
+    <Compile Include="ContentPages\Data\Models\Municipio.cs" />
+    <Compile Include="ContentPages\Data\Models\Tweet.cs" />
+    <Compile Include="ContentPages\Data\Models\Region.cs" />
+    <Compile Include="ContentPages\Data\Models\PuebloIndigena.cs" />
+    <Compile Include="ContentPages\Data\Models\Publicidad.cs" />
+    <Compile Include="ContentPages\Data\Models\ProgramaGobierno.cs" />
+    <Compile Include="ContentPages\Data\Models\Notificacion.cs" />
+    <Compile Include="ContentPages\Data\Models\NivelEstudios.cs" />
+    <Compile Include="ContentPages\Data\Models\Images.cs" />
+    <Compile Include="ContentPages\Data\Models\Curp.cs" />
+    <Compile Include="ContentPages\Data\Models\RecuperarPass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.9\lib\portable-net45+win8+wpa81+wp8\FFImageLoading.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Platform">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.9\lib\portable-net45+win8+wpa81+wp8\FFImageLoading.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Transformations">
+      <HintPath>..\packages\Xamarin.FFImageLoading.Transformations.2.2.9\lib\portable-net45+win8+wpa81+wp8\FFImageLoading.Transformations.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Forms">
+      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.9\lib\portable-net45+win8+wpa81+wp8\FFImageLoading.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\portable-net45+win8+wpa81+wp8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ContentPages\" />
+    <Folder Include="ContentPages\Login\" />
+    <Folder Include="Providers\" />
+    <Folder Include="ContentPages\Data\" />
+    <Folder Include="ContentPages\Data\Properties\" />
+    <Folder Include="ContentPages\Home\" />
+    <Folder Include="ContentPages\Data\Models\" />
+    <Folder Include="CustomViews\" />
+    <Folder Include="ContentPages\Profile\" />
+    <Folder Include="ContentPages\Menu\" />
+    <Folder Include="ContentPages\GuanajovenCode\" />
+    <Folder Include="ContentPages\Event\" />
+    <Folder Include="ContentPages\Call\" />
+    <Folder Include="ContentPages\Calendar\" />
+    <Folder Include="ContentPages\Notifications\" />
+    <Folder Include="ContentPages\SocialMedia\" />
+    <Folder Include="ContentPages\Region\" />
+    <Folder Include="ContentPages\About\" />
+    <Folder Include="ContentPages\Data\Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+</Project>

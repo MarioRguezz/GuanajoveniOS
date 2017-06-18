@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Guanajoven.MasterHomePage">
+	<ContentPage.Content>
+		<Grid Padding="0">
+			<Image Source="background4.jpg" Scale="1.1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Aspect="AspectFill" />
+			<BoxView x:Name="Background" BackgroundColor="#83074677">
+			</BoxView>
+			<Image Source="logo.png" HorizontalOptions="Center" VerticalOptions="Start" HeightRequest="160" Margin="0,90,0,0" WidthRequest="160" />
+			<StackLayout Orientation="Vertical" HeightRequest="400" Margin="0,15,0,0" HorizontalOptions="FillAndExpand">
+				<StackLayout x:Name="_topContainer" HorizontalOptions="FillAndExpand" Spacing="5" VerticalOptions="Start" Padding="8" IsVisible="true" Orientation="Horizontal" HeightRequest="46">
+					<Image Source="ic_menu_white_24dp.png" HorizontalOptions="StartAndExpand" HeightRequest="30" WidthRequest="30" VerticalOptions="Center">
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="MenuClicked" />
+						</Image.GestureRecognizers>
+					</Image>
+					<Image Source="infowhite.png" HorizontalOptions="End" HeightRequest="30" WidthRequest="30" VerticalOptions="Center">
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="MenuClicked" />
+						</Image.GestureRecognizers>
+					</Image>
+				</StackLayout>
+				<StackLayout x:Name="_subtopContainer" Spacing="5" VerticalOptions="Start" Padding="8" IsVisible="true" HorizontalOptions="FillAndExpand" Orientation="Horizontal" HeightRequest="36">
+					<Image Source="ic_keyboard_arrow_left_white_24dp.png" HorizontalOptions="EndAndExpand" HeightRequest="30" WidthRequest="30" VerticalOptions="Center">
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="Advertising" />
+						</Image.GestureRecognizers>
+					</Image>
+				</StackLayout>
+			</StackLayout>
+			<StackLayout VerticalOptions="EndAndExpand" Margin="0,0,0,90" Orientation="Vertical">
+				<StackLayout Orientation="Horizontal">
+					<Image Source="profilemenu.png" HorizontalOptions="FillAndExpand" Aspect="AspectFit" HeightRequest="80" WidthRequest="50">
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="MenuClicked" />
+						</Image.GestureRecognizers>
+					</Image>
+					<Image Source="eventosmenu.png" HorizontalOptions="FillAndExpand" Aspect="AspectFit" HeightRequest="80" WidthRequest="50">
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="MenuClicked" />
+						</Image.GestureRecognizers>
+					</Image>
+					<Image Source="checkmenu.png" HorizontalOptions="FillAndExpand" Aspect="AspectFit" HeightRequest="80" WidthRequest="50">
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="MenuClicked" />
+						</Image.GestureRecognizers>
+					</Image>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" Margin="0,35,0,0">
+					<Image Source="convocatoriasmenu.png" HorizontalOptions="FillAndExpand" Aspect="AspectFit" HeightRequest="80" WidthRequest="50">
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="MenuClicked" />
+						</Image.GestureRecognizers>
+					</Image>
+					<Image Source="redesoscialesmenu.png" HorizontalOptions="FillAndExpand" Aspect="AspectFit" HeightRequest="80" WidthRequest="50">
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="MenuClicked" />
+						</Image.GestureRecognizers>
+					</Image>
+					<Image Source="chatmenu.png" HorizontalOptions="FillAndExpand" Aspect="AspectFit" HeightRequest="80" WidthRequest="50">
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="MenuClicked" />
+						</Image.GestureRecognizers>
+					</Image>
+				</StackLayout>
+			</StackLayout>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>
