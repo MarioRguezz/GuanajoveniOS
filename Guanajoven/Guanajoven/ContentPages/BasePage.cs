@@ -5,6 +5,15 @@ namespace Guanajoven
 {
 	public class BasePage : ContentPage
 	{
+		#region FB
+		//it's set on the render
+		public Action FBLoginAction;
+		//it's set on InitActions();
+		public Action<AuthResponse> FBLoginResponse;
+		#endregion
+
+
+
 		public Action<string> ShowProgressMessage;
 		public Action<IProgressType> ShowProgressType;
 		public Action HideProgressAction;

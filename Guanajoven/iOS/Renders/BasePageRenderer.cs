@@ -17,9 +17,6 @@ namespace Guanajoven.iOS
 	{
 		BasePage _basePage;
 
-
-
-
 		protected override void OnElementChanged(VisualElementChangedEventArgs e)
 		{
 			base.OnElementChanged(e);
