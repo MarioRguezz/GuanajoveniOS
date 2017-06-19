@@ -43,12 +43,32 @@
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Para mejorar los puntos de partida y de llegada, la atención al cliente y la seguridad, Kour recopila información de ubicación (i) cuando el app está inactivo y (ii) desde el momento en que pides un viaje hasta cinco minutos después de que termina.</string>
+	<string>Podemos usar tu ubicación.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Para mejorar los puntos de partida y de llegada, la atención al cliente y la seguridad, Kour recopila información de ubicación (i) cuando el app está inactivo y (ii) desde el momento en que pides un viaje hasta cinco minutos después de que termina.</string>
+	<string>Podemos usar tu ubicación.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>¿Podemos acceder a tus fotografías?</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Podemos accesar a tu camara.</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>Xamarin.Auth Google OAuth</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.08bits.guanajoven</string>
+				<string>com.googleusercontent.apps.371600553371-ksut82ar9d3ljdp7rhvt82ktgcd8v22m</string>
+				<string>fb1176754645778022</string>
+			</array>
+			<key>CFBundleURLTypes</key>
+			<string>Viewer</string>
+		</dict>
+	</array>
 </dict>
 </plist>

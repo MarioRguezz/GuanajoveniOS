@@ -5,6 +5,7 @@ using CoreGraphics;
 using Guanajoven;
 using Guanajoven.iOS;
 using UIKit;
+using Xamarin.Auth;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using Xamarin.Media;
@@ -34,6 +35,8 @@ namespace Guanajoven.iOS
 				_basePage.TakePicture = TakePicture;
 			}
 		}
+
+		#region IMAGES
 
 		async void TakePicture()
 		{
@@ -116,8 +119,6 @@ namespace Guanajoven.iOS
 				}, TaskScheduler.FromCurrentSynchronizationContext());
 		}
 
-
-
 		public byte[] ResizeTheImage(byte[] imageData, float width, float height)
 		{
 			UIImage originalImage = ImageFromByteArray(imageData);
@@ -162,6 +163,9 @@ namespace Guanajoven.iOS
 			return image;
 		}
 
+
+		#endregion
+		 
 	}
 }
 

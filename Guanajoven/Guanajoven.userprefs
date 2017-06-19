@@ -1,14 +1,41 @@
 ﻿<Properties StartupConfiguration="{1315BADC-5285-4B5D-9045-6A9B41469E54}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Guanajoven/ContentPages/BasePage.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Guanajoven/App.xaml.cs">
     <Files>
-      <File FileName="iOS/Renders/BasePageRenderer.cs" Line="35" Column="5" />
-      <File FileName="Guanajoven/ContentPages/BasePage.cs" Line="18" Column="23" />
+      <File FileName="Guanajoven/App.xaml.cs" Line="39" Column="13" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Guanajoven" expanded="True">
+            <Node name="Guanajoven" expanded="True">
+              <Node name="ContentPages" expanded="True">
+                <Node name="Calendar" expanded="True" />
+                <Node name="Idiomas" expanded="True">
+                  <Node name="PickIdiomas.xaml" expanded="True" />
+                  <Node name="SetInfoIdioma.xaml" expanded="True" />
+                </Node>
+                <Node name="Login" expanded="True">
+                  <Node name="LoginPage.xaml" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="CustomViews" expanded="True">
+                <Node name="CheckBox" expanded="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True">
+                <Node name="App.xaml.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="Guanajoven.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/marioalbertonegreterodriguez/Projects/Guanajoven/Guanajoven/ContentPages/Home/MasterHomePage.xaml.cs" line="67" column="1" />
+      <Breakpoint file="/Users/oscar/Work/GuanaJoven/Guanajoven/Guanajoven/App.xaml.cs" line="15" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
