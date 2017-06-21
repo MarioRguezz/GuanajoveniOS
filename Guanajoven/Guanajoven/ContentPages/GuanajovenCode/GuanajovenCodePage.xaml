@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Guanajoven.GuanajovenCodePage">
 	<ContentPage.Content>
-		<Label Margin="0,20,0,0" HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="CODE" TextColor="#002d6d" />
+		<StackLayout>
+			<Label Margin="0,20,0,0" HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="CODE" TextColor="#002d6d" />
+			<Image  x:Name="_qrImage"  BackgroundColor="#FAFAFA"/>
+		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

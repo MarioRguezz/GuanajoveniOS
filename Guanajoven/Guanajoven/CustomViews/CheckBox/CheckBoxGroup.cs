@@ -6,6 +6,9 @@ namespace Guanajoven
 {
 	public class CheckBoxGroup : StackLayout
 	{
+
+		public event EventHandler<string> RemoveValue;
+
 		List<Checkbox> optionRatingList;
 		string [] optionTextArray;
 		public Label Label;
@@ -142,16 +145,22 @@ namespace Guanajoven
 			return optionTap;
 		}
 
-		void UpdateRating (int optionId)
+		public void UpdateRating (int optionId)
 		{
 			Checkbox checkBox = optionRatingList [optionId - 1];
 
+			var option = optionTextArray[optionId - 1];
+
 			if (checkBox.IsChecked ()) {
 				checkBox.TurnCheckboxOff ();
-				Values.Remove (optionTextArray [optionId - 1]);
+
+				if (RemoveValue != null)
+					RemoveValue(this, option);
+
+				Values.Remove (option);
 			} else {
 				checkBox.TurnCheckboxOn ();
-				Values.Add (optionTextArray [optionId - 1]);
+				Values.Add (option);
 			}
 		}
 	}

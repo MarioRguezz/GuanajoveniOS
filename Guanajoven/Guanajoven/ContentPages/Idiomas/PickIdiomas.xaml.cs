@@ -14,6 +14,8 @@ namespace Guanajoven
 			InitializeComponent();
 
 			SetIdiomas();
+
+			NavigationPage.SetHasNavigationBar(this, false);
 		}
 
 		void SetIdiomas()
@@ -30,7 +32,20 @@ namespace Guanajoven
 			};
 
 			_checks = new CheckBoxGroup(list.ToArray());
+
+			_checks.RemoveValue += (sender, value) =>
+			{
+				if (HelperIdioma.InfioIdiomas.ContainsKey(value))
+					HelperIdioma.InfioIdiomas.Remove(value);
+			};
+
 			_scrollView.Content = _checks;
+
+			foreach (var item in HelperIdioma.InfioIdiomas)
+			{
+				var index = list.IndexOf(item.Key);
+				_checks.UpdateRating(index + 1);
+			}
 		}
 
 
@@ -41,6 +56,10 @@ namespace Guanajoven
 			if (res.Count > 0)
 			{
 				await Navigation.PushAsync(new CarouselPageIdiomas(res));
+			}
+			else {
+				//
+				await DisplayAlert("", "Elige al menos un idioma", "Ok");
 			}
 
 		}

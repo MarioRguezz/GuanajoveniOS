@@ -15,16 +15,32 @@ namespace Guanajoven
 			var n = 0;
 			foreach (var idioma in Idiomas)
 			{
-				var p = new SetInfoIdioma(idioma,n==(idiomas.Count-1));
+
+				InfoIdioma indoIdioma;
+				if (HelperIdioma.InfioIdiomas.ContainsKey(idioma))
+				{
+					indoIdioma = HelperIdioma.InfioIdiomas[idioma];
+				}
+				else {
+					indoIdioma = new InfoIdioma()
+					{
+						Nombre = idioma,
+					};
+				}
+				
+
+				var p = new SetInfoIdioma(indoIdioma, n == (idiomas.Count - 1));
 				p.NextPage = NextPage;
 				Children.Add(p);
 
 				n++;
 			}
 
+			NavigationPage.SetHasNavigationBar(this, false);
+
 		}
 
-		void NextPage(SetInfoIdioma obj)
+		async void NextPage(SetInfoIdioma obj)
 		{
 			var n = Children.IndexOf(obj);
 			if (Children.Count > (n + 1))
@@ -37,11 +53,16 @@ namespace Guanajoven
 					foreach (var item in HelperIdioma.InfioIdiomas)
 					{
 						var infoIdioma = item.Value;
-						System.Diagnostics.Debug.WriteLine("{0},  Lectura:{1} Escritura:{2} Redaccion:{3}",infoIdioma.Nombre,infoIdioma.Lectura,infoIdioma.Escritura,infoIdioma.Redaccion);
+						System.Diagnostics.Debug.WriteLine("{0},  Lectura:{1} Escritura:{2} Redaccion:{3}", infoIdioma.Nombre, infoIdioma.Lectura, infoIdioma.Escritura, infoIdioma.Redaccion);
 					}
+
+					MessagingCenter.Send<CarouselPageIdiomas>(this, "finished_picking");
+
+
+					await Navigation.PopModalAsync();
 				}
 			}
-				
+
 		}
 	}
 }

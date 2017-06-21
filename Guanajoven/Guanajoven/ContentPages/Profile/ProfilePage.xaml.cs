@@ -7,6 +7,11 @@ namespace Guanajoven
 {
 	public partial class ProfilePage : BasePage
 	{
+		async void SetIdiomas(object sender, System.EventArgs e)
+		{
+			await Navigation.PushModalAsync(new NavigationPage(new PickIdiomas()));
+		}
+
 		HomeDrawerPage RootPage;
 		public ProfilePage(HomeDrawerPage _rootPage)
 		{
@@ -15,19 +20,44 @@ namespace Guanajoven
 
 			NavigationPage.SetHasNavigationBar(this, false);
 			Background.BackgroundColor = Color.FromHex("#b7C7E1F5");
+
+
+			MessagingCenter.Subscribe<CarouselPageIdiomas>(this, "finished_picking", (sender) =>
+			{
+				SetStackIdiomas();
+			});
 		}
 
+		void SetStackIdiomas()
+		{
+			_idiomasStack.Children.Clear();
+
+			if (HelperIdioma.InfioIdiomas.Count > 0)
+			{
+				foreach (var keyPair in HelperIdioma.InfioIdiomas)
+				{
+					_idiomasStack.Children.Add(new IdiomaItemView(keyPair.Value));
+				}
+			}
+		}
+
+		bool firstTime = true;
 
 		protected override void OnAppearing()
 		{
 
-			pickerSetStudies();
-			pickerSetBeneficiario();
-			pickerSetJob();
-			pickerSetPopulation();
-			pickerSetHandicap();
-			pickerSetAwards();
-			pickerSetSocial();
+			if (firstTime)
+			{
+				pickerSetStudies();
+				pickerSetBeneficiario();
+				pickerSetJob();
+				pickerSetPopulation();
+				pickerSetHandicap();
+				pickerSetAwards();
+				pickerSetSocial();
+			}
+
+			firstTime = false;
 		}
 
 
