@@ -3,6 +3,7 @@ namespace Guanajoven
 {
 	public enum WEB_METHODS
 	{
+		Curp,
 		GetMensajeros,
 		Promociones,
 		Destination,
@@ -30,7 +31,8 @@ namespace Guanajoven
 	public class Config
 	{
 		//	public static string URL = "http://189.211.207.173/courier/public/";
-		public static string URL = "http://10.0.7.134/GuanajovenWeb/public/api/";
+		//public static string URL = "http://10.0.7.134/GuanajovenWeb/public/api/";
+		public static string URL = "http://200.23.39.11/GuanajovenWeb/public/api/";
 
 		/*
 		private static Realm realm;
@@ -46,8 +48,8 @@ namespace Guanajoven
 
 			switch (method)
 			{
-				case WEB_METHODS.GetMensajeros:
-					return "user/provider_list";
+				case WEB_METHODS.Curp:
+					return "usuarios/curp";
 				case WEB_METHODS.Promociones:
 					return "user/apply-promo";
 				case WEB_METHODS.Destination:

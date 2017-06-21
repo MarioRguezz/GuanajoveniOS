@@ -18,40 +18,55 @@ namespace Guanajoven
 				switch (pageType)
 				{
 					case DrawerPage.HomeView:
-						Detail.Navigation.PushAsync(new HomeDrawerPage());
+						Detail = new NavigationPage(new MasterHomePage(this));
 						break;
 					case DrawerPage.ProfileView:
-						Detail.Navigation.PushAsync(new ProfilePage());
+
+						Detail = new NavigationPage(new ProfilePage(this));
 						break;
 					case DrawerPage.CodigoView:
-						Detail.Navigation.PushAsync(new GuanajovenCodePage());
+						//Detail.Navigation.PushAsync(new GuanajovenCodePage());
+						Detail = new NavigationPage(new GuanajovenCodePage());
 						break;
 					case DrawerPage.Cerrar:
 						//Cerrar Sesión 
 						break;
 					case DrawerPage.EventosView:
-						Detail.Navigation.PushAsync(new EventsView());
+						//Detail.Navigation.PushAsync(new EventsView());
+						Detail = new NavigationPage(new EventsView());
 						break;
 					case DrawerPage.ConvocatoriasView:
-						Detail.Navigation.PushAsync(new CallPage());
+						Detail = new NavigationPage(new CallPage());
 						break;
 					case DrawerPage.CalendarioView:
-						Detail.Navigation.PushAsync(new CalendarPage());
+						//Detail.Navigation.PushAsync(new CalendarPage());
+
+						Detail = new NavigationPage(new CalendarPage());
 						break;
 					case DrawerPage.NotificacionesView:
-						Detail.Navigation.PushAsync(new NotificationPage());
+						//Detail.Navigation.PushAsync(new NotificationPage());
+
+						Detail = new NavigationPage(new NotificationPage());
 						break;
 					case DrawerPage.RedesSocialesView:
-						Detail.Navigation.PushAsync(new SocialMediaPage());
+						//Detail.Navigation.PushAsync(new SocialMediaPage());
+
+						Detail = new NavigationPage(new SocialMediaPage(this));
 						break;
 					case DrawerPage.ChatView:
-						Detail.Navigation.PushAsync(new ChatPage());
+						//Detail.Navigation.PushAsync(new ());
+
+						Detail = new NavigationPage(new ChatPage());
 						break;
 					case DrawerPage.RegionesView:
-						Detail.Navigation.PushAsync(new RegionPage());
+						//Detail.Navigation.PushAsync(new ());
+
+						Detail = new NavigationPage(new RegionPage());
 						break;
 					case DrawerPage.AcercaView:
-						Detail.Navigation.PushAsync(new AboutPage());
+						//Detail.Navigation.PushAsync(new ());
+
+						Detail = new NavigationPage(new AboutPage());
 						break;
 
 				}
@@ -81,8 +96,17 @@ namespace Guanajoven
 				//_drawer.UpdateView();
 			};
 
+			SetListeners();
+
 			NavigationPage.SetHasNavigationBar(this, false);
 		}
 
+		void SetListeners()
+		{
+			MessagingCenter.Subscribe<ProfilePage>(this, "show_home", (sender) =>
+			{
+				Detail = new NavigationPage(new MasterHomePage(this));
+			});
+		}
 	}
 }

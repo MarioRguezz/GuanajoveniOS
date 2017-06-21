@@ -278,6 +278,7 @@
     <BundleResource Include="Resources\convocatoriasmenu.png" />
     <BundleResource Include="Resources\redesoscialesmenu.png" />
     <BundleResource Include="Resources\chatmenu.png" />
+    <BundleResource Include="Resources\menuburguer.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamarin.mobile">

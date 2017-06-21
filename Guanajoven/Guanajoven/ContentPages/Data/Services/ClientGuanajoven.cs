@@ -26,6 +26,22 @@ namespace Guanajoven
 			return httpClient;
 		}
 
+
+
+		public static async Task<string> getCurp(string curp)
+		{
+			var jsonResponse = await PostObject<Curp>(new Curp()
+			{
+				curp = curp
+			}, WEB_METHODS.Curp);
+
+			if (jsonResponse == null)
+			{
+				return null;
+			}
+
+			return jsonResponse;
+		} 
 		/*
      * Funciona
      * @param usr_lat

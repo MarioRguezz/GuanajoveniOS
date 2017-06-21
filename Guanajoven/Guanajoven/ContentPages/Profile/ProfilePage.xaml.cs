@@ -7,9 +7,12 @@ namespace Guanajoven
 {
 	public partial class ProfilePage : BasePage
 	{
-		public ProfilePage()
+		HomeDrawerPage RootPage;
+		public ProfilePage(HomeDrawerPage _rootPage)
 		{
 			InitializeComponent();
+			RootPage = _rootPage;
+
 			NavigationPage.SetHasNavigationBar(this, false);
 			Background.BackgroundColor = Color.FromHex("#b7C7E1F5");
 		}
@@ -35,7 +38,10 @@ namespace Guanajoven
 			var image = sender as Image;
 			image.Opacity = 0.6;
 			image.FadeTo(1);
-			await Navigation.PopAsync();
+			//await Navigation.PopAsync();
+			//MessagingCenter.Send<ProfilePage>(this, "show_home");
+			RootPage.IsPresented = true;
+
 		}
 
 		async void SignUpClicked(object sender, System.EventArgs e)
@@ -105,11 +111,11 @@ namespace Guanajoven
 			pickerEstado.Items.Add("Federal");
 			pickerEstado.Items.Add("Internacional");
 			pickerEstado.SelectedIndex = 0;
-			pickerbeneficiario.SelectedIndexChanged += (sender, e) =>
+			pickerEstado.SelectedIndexChanged += (sender, e) =>
 			{
-				if (pickerbeneficiario.SelectedIndex == 0)
+				if (pickerEstado.SelectedIndex == 0)
 				{
-					pickerbeneficiario.SelectedIndex = 1;
+					pickerEstado.SelectedIndex = 1;
 				}
 
 			};

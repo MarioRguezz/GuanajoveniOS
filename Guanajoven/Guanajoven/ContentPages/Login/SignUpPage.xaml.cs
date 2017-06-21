@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Threading.Tasks;
+using Newtonsoft.Json;
 using Xamarin.Forms;
 
 namespace Guanajoven
@@ -12,8 +13,6 @@ namespace Guanajoven
 			InitializeComponent();
 			NavigationPage.SetHasNavigationBar(this, false);
 			Background.BackgroundColor = Color.FromHex("#b7C7E1F5");
-
-
 			ImageSourceChanged = () =>
 		{
 			if (LastView is FFImageLoading.Forms.CachedImage)
@@ -45,10 +44,71 @@ namespace Guanajoven
 		async void SignUpClicked(object sender, System.EventArgs e)
 		{
 			//await Navigation.PushModalAsync(new SignUpPage());
+			//
 		}
 
 
+		/*	public void Curp()
+			{
+				_curp.Completed += (sender, e) =>
+				{
+
+				};
+			}*/
+
+
+		private async void DynamicEditor_TextChanged(object sender, TextChangedEventArgs e)
+		{
+			if (String.IsNullOrEmpty(e.NewTextValue) == false)
+				_curp.Text = e.NewTextValue.ToUpper();
+			if (e.NewTextValue.Length == 18)
+			{
+				ShowProgress("Validando");
+				var response = await ClientGuanajoven.getCurp(_curp.Text);
+
+				if (ValidateResponse(response))
+				{
+					var ResponseCurp = JsonConvert.DeserializeObject<ResponseCurp>(response);
+					_nombre.Text = ResponseCurp.data.nombres;
+					fecha_nac.Text = ResponseCurp.data.fechNac;
+					_apellidpat.Text = ResponseCurp.data.PrimerApellido;
+					_apellidmat.Text = ResponseCurp.data.SegundoApellido;
+
+
+					var foto =   "data:image/jpeg;base64," +  Convert.ToBase64String(bytes);
+
+					await Task.Delay(600);
+					HideProgress();
+					if (ResponseCurp.data.nombres == null || ResponseCurp.data.nombres == "")
+					{
+						DisplayAlert("Error", "Verifique su Curp", "Aceptar");
+					}
+					//await Navigation.PushModalAsync(new RootPage());
+				}
+
+				HideProgress();
+			}
+		}
+
+
+
+		bool ValidateResponse(string response)
+		{
+			if (ClientGuanajoven.IsError(response))
+			{
+				DisplayAlert("Error", "Verifique su Curp", "Aceptar");
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+		}
+
+
+
 		async void ChangePicture(object sender, EventArgs e)
+
 		{
 			TakePictureActionSheet(_imageView);
 		}

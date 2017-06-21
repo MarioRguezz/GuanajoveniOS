@@ -110,7 +110,7 @@ namespace Guanajoven.iOS
 						if (_basePage != null)
 						{
 							_basePage.ImagePath = media.Path;
-							_basePage.bytes = ResizeTheImage(mstr.ToArray(), 400, 400);
+							_basePage.bytes = ResizeTheImage(mstr.ToArray(), 800, 800);
 							_basePage.Source = ImageSource.FromStream(() => new MemoryStream(_basePage.bytes));
 						}
 
