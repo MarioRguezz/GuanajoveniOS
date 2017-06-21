@@ -55,6 +55,7 @@ namespace Guanajoven
 
 					//MainPage = new NavigationPage(new RootPage());
 					MainPage = new NavigationPage(new RootPage());
+				//	MainPage = new NavigationPage(new PickIdiomas());
 				}
 			}
 
