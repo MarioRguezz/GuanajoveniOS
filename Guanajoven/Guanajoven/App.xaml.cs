@@ -34,7 +34,10 @@ namespace Guanajoven
 						throw ex;
 					}
 				}*/
- 
+
+
+			//MainPage = new NavigationPage(new PickIdiomas());
+			//return;
 
 			if (PropertiesManager.IsFirstTime())
 			{

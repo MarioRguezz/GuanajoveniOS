@@ -1,4 +1,5 @@
 ﻿<Properties StartupConfiguration="{1315BADC-5285-4B5D-9045-6A9B41469E54}|Default">
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Renders/BasePageRenderer.cs">
     <Files>
       <File FileName="Guanajoven/ContentPages/Login/SignUpPage.xaml.cs" Line="78" Column="6" />
@@ -8,16 +9,54 @@
       <File FileName="Guanajoven/ContentPages/Data/Models/Curp.cs" Line="10" Column="15" />
       <File FileName="iOS/Renders/BasePageRenderer.cs" Line="113" Column="63" />
     </Files>
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Guanajoven/App.xaml.cs">
+    <Files>
+      <File FileName="Guanajoven/App.xaml.cs" Line="39" Column="13" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Guanajoven" expanded="True">
+            <Node name="Guanajoven" expanded="True">
+              <Node name="ContentPages" expanded="True">
+                <Node name="Calendar" expanded="True" />
+                <Node name="Idiomas" expanded="True">
+                  <Node name="PickIdiomas.xaml" expanded="True" />
+                  <Node name="SetInfoIdioma.xaml" expanded="True" />
+                </Node>
+                <Node name="Login" expanded="True">
+                  <Node name="LoginPage.xaml" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="CustomViews" expanded="True">
+                <Node name="CheckBox" expanded="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True">
+                <Node name="App.xaml.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="Guanajoven.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+>>>>>>> b63254288446167168880806ae3c002cad911599
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
+<<<<<<< HEAD
       <Breakpoint file="/Users/marioalbertonegreterodriguez/Projects/Guanajoven/Guanajoven/ContentPages/Home/MasterHomePage.xaml.cs" relfile="Guanajoven/ContentPages/Home/MasterHomePage.xaml.cs" line="67" column="1" />
       <Breakpoint file="/Users/marioalbertonegreterodriguez/Projects/Guanajoven/Guanajoven/ContentPages/Login/SignUpPage.xaml.cs" relfile="Guanajoven/ContentPages/Login/SignUpPage.xaml.cs" line="54" column="1" />
       <Breakpoint file="/Users/marioalbertonegreterodriguez/Projects/Guanajoven/Guanajoven/ContentPages/Login/SignUpPage.xaml.cs" relfile="Guanajoven/ContentPages/Login/SignUpPage.xaml.cs" line="38" column="1" />
+=======
+      <Breakpoint file="/Users/marioalbertonegreterodriguez/Projects/Guanajoven/Guanajoven/ContentPages/Home/MasterHomePage.xaml.cs" line="67" column="1" />
+      <Breakpoint file="/Users/oscar/Work/GuanaJoven/Guanajoven/Guanajoven/App.xaml.cs" line="15" column="1" />
+>>>>>>> b63254288446167168880806ae3c002cad911599
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Guanajoven.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D516CC0F-1EEB-4194-BF63-504EF0E6C504" />
+  <MonoDevelop.Ide.ItemProperties.Guanajoven.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.675E323D-7822-45DA-96A9-9B492F1BBBA2" />
 </Properties>
