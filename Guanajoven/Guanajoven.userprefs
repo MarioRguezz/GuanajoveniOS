@@ -1,43 +1,5 @@
 ﻿<Properties StartupConfiguration="{1315BADC-5285-4B5D-9045-6A9B41469E54}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Guanajoven/App.xaml.cs">
-    <Files>
-      <File FileName="Guanajoven/ContentPages/Idiomas/CarouselPageIdiomas.cs" Line="34" Column="26" />
-      <File FileName="Guanajoven/App.xaml.cs" Line="57" Column="5" />
-      <File FileName="Guanajoven/ContentPages/Idiomas/PickIdiomas.xaml.cs" Line="30" Column="6" />
-      <File FileName="Guanajoven/ContentPages/Idiomas/PickIdiomas.xaml" Line="5" Column="18" />
-      <File FileName="Guanajoven/ContentPages/Idiomas/SetInfoIdioma.xaml.cs" Line="42" Column="59" />
-      <File FileName="Guanajoven/ContentPages/Idiomas/SetInfoIdioma.xaml" Line="12" Column="18" />
-      <File FileName="Guanajoven/ContentPages/Idiomas/HelperIdioma.cs" Line="1" Column="1" />
-      <File FileName="Guanajoven/ContentPages/Login/LoginPage.xaml.cs" Line="1" Column="1" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Guanajoven" expanded="True">
-            <Node name="Guanajoven" expanded="True">
-              <Node name="ContentPages" expanded="True">
-                <Node name="Idiomas" expanded="True">
-                  <Node name="PickIdiomas.xaml" expanded="True" />
-                  <Node name="SetInfoIdioma.xaml" expanded="True" />
-                </Node>
-                <Node name="Login" expanded="True">
-                  <Node name="LoginPage.xaml" expanded="True" />
-                </Node>
-                <Node name="Profile" expanded="True" />
-              </Node>
-              <Node name="App.xaml" expanded="True">
-                <Node name="App.xaml.cs" selected="True" />
-              </Node>
-            </Node>
-            <Node name="Guanajoven.iOS" expanded="True">
-              <Node name="ComponentReferenceFolder" expanded="True" />
-              <Node name="Renders" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
