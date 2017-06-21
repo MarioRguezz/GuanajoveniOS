@@ -6,27 +6,17 @@
           <Node name="Guanajoven" expanded="True">
             <Node name="Guanajoven" expanded="True">
               <Node name="ContentPages" expanded="True">
-                <Node name="Home" expanded="True" />
-                <Node name="Idiomas" expanded="True">
-                  <Node name="IdiomaItemView.xaml" expanded="True">
-                    <Node name="IdiomaItemView.xaml.cs" selected="True" />
+                <Node name="GuanajovenCode" expanded="True">
+                  <Node name="GuanajovenCodePage.xaml" expanded="True">
+                    <Node name="GuanajovenCodePage.xaml.cs" selected="True" />
                   </Node>
-                  <Node name="PickIdiomas.xaml" expanded="True" />
-                  <Node name="SetInfoIdioma.xaml" expanded="True" />
                 </Node>
-                <Node name="Login" expanded="True" />
-                <Node name="Menu" expanded="True" />
-                <Node name="Profile" expanded="True">
-                  <Node name="ProfilePage.xaml" expanded="True" />
-                </Node>
-                <Node name="Region" expanded="True" />
-              </Node>
-              <Node name="CustomViews" expanded="True">
-                <Node name="CheckBox" expanded="True" />
               </Node>
               <Node name="App.xaml" expanded="True" />
             </Node>
-            <Node name="Guanajoven.iOS" expanded="True" />
+            <Node name="Guanajoven.iOS" expanded="True">
+              <Node name="Providers" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>

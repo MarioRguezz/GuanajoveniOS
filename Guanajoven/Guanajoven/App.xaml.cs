@@ -36,6 +36,9 @@ namespace Guanajoven
 				}*/
 
 
+			MainPage = new NavigationPage(new GuanajovenCodePage());
+			return;
+
 			if (PropertiesManager.IsFirstTime())
 			{
 				MainPage = new WelcomePage();
