@@ -36,9 +36,6 @@ namespace Guanajoven
 				}*/
 
 
-			//MainPage = new NavigationPage(new PickIdiomas());
-			//return;
-
 			if (PropertiesManager.IsFirstTime())
 			{
 				MainPage = new WelcomePage();

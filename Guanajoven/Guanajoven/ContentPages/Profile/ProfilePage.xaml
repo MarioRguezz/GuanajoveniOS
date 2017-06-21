@@ -15,9 +15,9 @@
 						</Image>
 						<BoxView HeightRequest="1" Margin="0,5,0,5" HorizontalOptions="FillAndExpand" />
 						<ffimageloading:CachedImage x:Name="_imageView" Source="logo.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" VerticalOptions="Center" DownsampleToViewSize="true">
-							<ffimageloading:CachedImage.Transformations>
+							<!--<ffimageloading:CachedImage.Transformations>
 								<fftransformations:CircleTransformation />
-							</ffimageloading:CachedImage.Transformations>
+							</ffimageloading:CachedImage.Transformations>-->
 						</ffimageloading:CachedImage>
 						<Label Text="Dinos algo sobre ti" FontAttributes="Bold" TextColor="#636363" HorizontalOptions="Start" Margin="0,-5,0,10" />
 						<BoxView HeightRequest="1" Margin="0,5,0,5" HorizontalOptions="FillAndExpand" />
@@ -86,7 +86,10 @@
 							</Entry.FontFamily>
 						</local:BorderlessEntry>
 						<BoxView HeightRequest="1" BackgroundColor="#636363" Margin="0,5,0,5" HorizontalOptions="FillAndExpand" />
-						<BoxView HeightRequest="1" Margin="0,5,0,5" HorizontalOptions="FillAndExpand" />
+						<Button Text="Elige los idiomas que conoces" TextColor="White" BackgroundColor="#003464" HorizontalOptions="FillAndExpand" Clicked="SetIdiomas"/>
+						<StackLayout x:Name="_idiomasStack">
+						</StackLayout>
+						<BoxView HeightRequest="1" BackgroundColor="#636363" Margin="0,5,0,5" HorizontalOptions="FillAndExpand" />
 						<Button Text="REGISTRAR" TextColor="White" HorizontalOptions="FillAndExpand" Margin="0" Clicked="SignUpClicked" BackgroundColor="#003464" VerticalOptions="Center" />
 					</StackLayout>
 				</ScrollView>

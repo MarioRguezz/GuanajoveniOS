@@ -4,14 +4,22 @@
 		<Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 			<Grid.RowDefinitions>
 				<RowDefinition Height="Auto" />
-				<RowDefinition Height="1*" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
 				<RowDefinition Height="Auto" />
 			</Grid.RowDefinitions>
-			<Label Grid.Row="0" x:Name="_nombre" Text="IDIOMAS" HorizontalTextAlignment="Center" FontSize="20" Margin="0,20,0,0" />
-			<ScrollView Grid.Row="1" x:Name="_scrollView" VerticalOptions="FillAndExpand">
-				<!--CHECKS-->
-			</ScrollView>
-			<Button Grid.Row="2" x:Name="_continuar" Text="CONTINUAR" HorizontalOptions="FillAndExpand" Clicked="ContinuarClicked"/>
+			<Label Grid.Row="0" x:Name="_nombre" Grid.ColumnSpan="3" Text="IDIOMAS" HorizontalTextAlignment="Center" FontSize="20" Margin="0,20,0,0" />
+			<Label Grid.Column="0" Grid.Row="1" Text="Lectura" HorizontalTextAlignment="Center" FontSize="18" />
+			<Entry Grid.Column="1" Grid.Row="1" x:Name="_lectura" Keyboard="Numeric" />
+			<Label Grid.Column="2" Grid.Row="1" Text="%" />
+			<Label Grid.Column="0" Grid.Row="2" Text="Escritura" HorizontalTextAlignment="Center" FontSize="18" />
+			<Entry Grid.Column="1" Grid.Row="2" x:Name="_escritura" Keyboard="Numeric" />
+			<Label Grid.Column="2" Grid.Row="2" Text="%" />
+			<Label Grid.Column="0" Grid.Row="3" Text="Redacción" HorizontalTextAlignment="Center" FontSize="18" />
+			<Entry Grid.Column="1" Grid.Row="3" x:Name="_redaccion" Keyboard="Numeric" />
+			<Label Grid.Column="2" Grid.Row="3" Text="%" />
+			<Button Grid.Row="4" x:Name="_continuar" Grid.ColumnSpan="3" Text="CONTINUAR" HorizontalOptions="FillAndExpand" Clicked="ContinuarClicked" />
 		</Grid>
 	</ContentPage.Content>
 </ContentPage>

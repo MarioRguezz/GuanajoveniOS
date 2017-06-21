@@ -1,48 +1,47 @@
 ﻿<Properties StartupConfiguration="{1315BADC-5285-4B5D-9045-6A9B41469E54}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Guanajoven/App.xaml.cs">
-    <Files>
-      <File FileName="Guanajoven/ContentPages/Idiomas/CarouselPageIdiomas.cs" Line="34" Column="26" />
-      <File FileName="Guanajoven/App.xaml.cs" Line="57" Column="5" />
-      <File FileName="Guanajoven/ContentPages/Idiomas/PickIdiomas.xaml.cs" Line="30" Column="6" />
-      <File FileName="Guanajoven/ContentPages/Idiomas/PickIdiomas.xaml" Line="5" Column="18" />
-      <File FileName="Guanajoven/ContentPages/Idiomas/SetInfoIdioma.xaml.cs" Line="42" Column="59" />
-      <File FileName="Guanajoven/ContentPages/Idiomas/SetInfoIdioma.xaml" Line="12" Column="18" />
-      <File FileName="Guanajoven/ContentPages/Idiomas/HelperIdioma.cs" Line="1" Column="1" />
-      <File FileName="Guanajoven/ContentPages/Login/LoginPage.xaml.cs" Line="1" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Guanajoven" expanded="True">
             <Node name="Guanajoven" expanded="True">
               <Node name="ContentPages" expanded="True">
+                <Node name="Home" expanded="True" />
                 <Node name="Idiomas" expanded="True">
+                  <Node name="IdiomaItemView.xaml" expanded="True">
+                    <Node name="IdiomaItemView.xaml.cs" selected="True" />
+                  </Node>
                   <Node name="PickIdiomas.xaml" expanded="True" />
                   <Node name="SetInfoIdioma.xaml" expanded="True" />
                 </Node>
-                <Node name="Login" expanded="True">
-                  <Node name="LoginPage.xaml" expanded="True" />
+                <Node name="Login" expanded="True" />
+                <Node name="Menu" expanded="True" />
+                <Node name="Profile" expanded="True">
+                  <Node name="ProfilePage.xaml" expanded="True" />
                 </Node>
-                <Node name="Profile" expanded="True" />
+                <Node name="Region" expanded="True" />
               </Node>
-              <Node name="App.xaml" expanded="True">
-                <Node name="App.xaml.cs" selected="True" />
+              <Node name="CustomViews" expanded="True">
+                <Node name="CheckBox" expanded="True" />
               </Node>
+              <Node name="App.xaml" expanded="True" />
             </Node>
-            <Node name="Guanajoven.iOS" expanded="True">
-              <Node name="ComponentReferenceFolder" expanded="True" />
-              <Node name="Renders" expanded="True" />
-            </Node>
+            <Node name="Guanajoven.iOS" expanded="True" />
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/oscar/Work/GuanaJoven/Guanajoven/Guanajoven/ContentPages/Profile/ProfilePage.xaml.cs" line="49" column="18" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Guanajoven.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D516CC0F-1EEB-4194-BF63-504EF0E6C504" />
+  <MonoDevelop.Ide.ItemProperties.Guanajoven.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.675E323D-7822-45DA-96A9-9B492F1BBBA2" />
 </Properties>

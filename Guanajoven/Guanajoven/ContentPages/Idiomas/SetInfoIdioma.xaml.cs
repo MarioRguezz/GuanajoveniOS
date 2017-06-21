@@ -11,54 +11,48 @@ namespace Guanajoven
 		public Action<SetInfoIdioma> PreviousPage;
 		public Action<int> GoToPage;
 
-		CheckBoxGroup _checks;
+		InfoIdioma InfoIdioma;
 
-		string Idioma;
-
-		public SetInfoIdioma(string idioma, bool last = false)
+		public SetInfoIdioma(InfoIdioma idioma, bool last = false)
 		{
 			InitializeComponent();
-			Idioma = idioma;
-			_nombre.Text = idioma;
-			SetIdiomas();
+
+			InfoIdioma = idioma;
+			_nombre.Text = idioma.Nombre;
+
+			if (idioma.Lectura > 0)
+				_lectura.Text = idioma.Lectura + "";
+			if (idioma.Escritura > 0)
+				_escritura.Text = idioma.Escritura + "";
+			if (idioma.Redaccion > 0)
+				_redaccion.Text = idioma.Redaccion + "";
+
+
 
 			if (last)
 				_continuar.Text = "Finalizar";
 		}
 
-		void SetIdiomas()
-		{
-			var list = new List<string>()
-			{
-				"Lectura",
-				"Escritura",
-				"Redacción",
-			};
-
-			_checks = new CheckBoxGroup(list.ToArray());
-			_scrollView.Content = _checks;
-		}
 
 		void ContinuarClicked(object sender, System.EventArgs e)
 		{
-			var res = _checks.Values;
+			if (!Valid())
+				return;
 
-			//if (res.Count > 0)
-			//{
 			var infoIdioma = new InfoIdioma()
 			{
-				Nombre = Idioma,
-				Lectura = res.Contains("Lectura"),
-				Escritura = res.Contains("Escritura"),
-				Redaccion = res.Contains("Redacción"),
+				Nombre = InfoIdioma.Nombre,
+				Lectura = int.Parse(_lectura.Text),
+				Escritura = int.Parse(_escritura.Text),
+				Redaccion = int.Parse(_redaccion.Text),
 			};
 
-			if (HelperIdioma.InfioIdiomas.ContainsKey(Idioma))
+			if (HelperIdioma.InfioIdiomas.ContainsKey(InfoIdioma.Nombre))
 			{
-				HelperIdioma.InfioIdiomas.Remove(Idioma);
+				HelperIdioma.InfioIdiomas.Remove(InfoIdioma.Nombre);
 			}
 
-			HelperIdioma.InfioIdiomas.Add(Idioma, infoIdioma);
+			HelperIdioma.InfioIdiomas.Add(InfoIdioma.Nombre, infoIdioma);
 
 			if (NextPage != null)
 			{
@@ -68,6 +62,56 @@ namespace Guanajoven
 
 
 
+		}
+
+		bool Valid()
+		{
+			if (string.IsNullOrEmpty(_lectura.Text))
+			{
+				DisplayAlert("", "Ingresa un porcentaje de lectura", "Ok");
+				return false;
+			}
+			else {
+				var x = int.Parse(_lectura.Text);
+				if (x < 0 || x > 100)
+				{
+					DisplayAlert("", "Ingresa un porcentaje de lectura correcto", "Ok");
+					return false;
+				}
+			}
+
+			if (string.IsNullOrEmpty(_escritura.Text))
+			{
+				DisplayAlert("", "Ingresa un porcentaje de escritura", "Ok");
+				return false;
+			}
+			else {
+				var x = int.Parse(_escritura.Text);
+				if (x < 0 || x > 100)
+				{
+					DisplayAlert("", "Ingresa un porcentaje de escritura correcto", "Ok");
+					return false;
+				}
+			}
+
+			if (string.IsNullOrEmpty(_redaccion.Text))
+			{
+				DisplayAlert("", "Ingresa un porcentaje de redacción", "Ok");
+				return false;
+			}
+			else {
+				var x = int.Parse(_redaccion.Text);
+				if (x < 0 || x > 100)
+				{
+					DisplayAlert("", "Ingresa un porcentaje de redacción correcto", "Ok");
+					return false;
+				}
+			}
+
+
+
+
+			return true;
 		}
 	}
 }

@@ -11,8 +11,8 @@ namespace Guanajoven
 	public class InfoIdioma
 	{
 		public string Nombre { get; set; }
-		public bool Lectura { get; set; }
-		public bool Escritura { get; set; }
-		public bool Redaccion { get; set; }
+		public int Lectura { get; set; }
+		public int Escritura { get; set; }
+		public int Redaccion { get; set; }
 	}
 }

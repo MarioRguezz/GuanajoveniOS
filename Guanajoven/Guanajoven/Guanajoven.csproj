@@ -90,6 +90,9 @@
     <EmbeddedResource Include="ContentPages\Idiomas\SetInfoIdioma.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="ContentPages\Idiomas\IdiomaItemView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -201,6 +204,9 @@
     </Compile>
     <Compile Include="ContentPages\Idiomas\CarouselPageIdiomas.cs" />
     <Compile Include="ContentPages\Idiomas\HelperIdioma.cs" />
+    <Compile Include="ContentPages\Idiomas\IdiomaItemView.xaml.cs">
+      <DependentUpon>IdiomaItemView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
