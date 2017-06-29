@@ -42,18 +42,18 @@ namespace Guanajoven
 			}
 		}
 
-		public static async void SaveUserInfo(Usuario user)
+		public static async void SaveUserInfo(ResponseUsuario user)
 		{
 			Application.Current.Properties[USER_INFO_KEY] = JsonConvert.SerializeObject(user);
 			await Application.Current.SavePropertiesAsync();
 		}
 
-		public static Usuario GetUserInfo()
+		public static ResponseUsuario GetUserInfo()
 		{
 			if (IsLogedIn())
 			{
 				var userJson = Application.Current.Properties[USER_INFO_KEY].ToString();
-				return JsonConvert.DeserializeObject<Usuario>(userJson);
+				return JsonConvert.DeserializeObject<ResponseUsuario>(userJson);
 			}
 
 			return null;

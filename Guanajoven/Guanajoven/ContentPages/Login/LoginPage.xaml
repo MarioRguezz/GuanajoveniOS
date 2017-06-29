@@ -2,7 +2,7 @@
 <local:BasePage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Guanajoven.LoginPage" xmlns:local="clr-namespace:Guanajoven" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations">
 	<local:BasePage.Content>
 		<Grid Padding="0">
-			<Image Source="background1.jpg" Scale="1.1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Aspect="AspectFill" />
+			<Image Source="menubackground.jpg" Scale="1.1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Aspect="AspectFill" />
 			<BoxView x:Name="Background">
 			</BoxView>
 			<StackLayout Grid.Row="0" Spacing="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="20,30,20,30">
@@ -20,7 +20,7 @@
 						</Grid.RowDefinitions>
 						<StackLayout Grid.Row="0" Spacing="10" VerticalOptions="Center" Margin="20,30,20,30">
 							<Image Source="logo.png" HorizontalOptions="Center" HeightRequest="130" WidthRequest="130" />
-							<local:BorderlessEntry x:Name="_email" PlaceholderColor="#003464" HorizontalOptions="FillAndExpand" TextColor="#003464" MaxLenght="25" Placeholder="Email">
+							<local:BorderlessEntry x:Name="_email" Keyboard="Email" PlaceholderColor="#003464" HorizontalOptions="FillAndExpand" TextColor="#003464" MaxLenght="25" Placeholder="Email">
 								<Entry.FontFamily>
 									<OnPlatform x:TypeArguments="x:String">
 										<OnPlatform.iOS>Avenir</OnPlatform.iOS>

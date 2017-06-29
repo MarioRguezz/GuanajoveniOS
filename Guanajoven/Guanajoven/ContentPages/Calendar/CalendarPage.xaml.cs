@@ -7,9 +7,11 @@ namespace Guanajoven
 {
 	public partial class CalendarPage : BasePage
 	{
-		public CalendarPage()
+		HomeDrawerPage RootPage;
+		public CalendarPage(HomeDrawerPage _rootPage)
 		{
 			InitializeComponent();
+			RootPage = _rootPage;
 			NavigationPage.SetHasNavigationBar(this, false);
 		}
 

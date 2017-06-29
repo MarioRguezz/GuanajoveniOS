@@ -16,7 +16,7 @@ namespace Guanajoven
 		public SetInfoIdioma(InfoIdioma idioma, bool last = false)
 		{
 			InitializeComponent();
-
+			//Background.BackgroundColor = Color.FromHex("#b7C7E1F5");
 			InfoIdioma = idioma;
 			_nombre.Text = idioma.Nombre;
 

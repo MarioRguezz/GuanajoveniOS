@@ -1,17 +1,22 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Guanajoven.PickIdiomas" xmlns:local="clr-namespace:Guanajoven">
 	<ContentPage.Content>
-		<Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-			<Grid.RowDefinitions>
-				<RowDefinition Height="Auto" />
-				<RowDefinition Height="1*" />
-				<RowDefinition Height="Auto" />
-			</Grid.RowDefinitions>
-			<Label Grid.Row="0" Text="IDIOMAS" HorizontalTextAlignment="Center" FontSize="20" Margin="0,20,0,0" />
-			<ScrollView Grid.Row="1" x:Name="_scrollView" VerticalOptions="FillAndExpand">
-				<!--CHECKS-->
-			</ScrollView>
-			<Button Grid.Row="2" x:Name="Continuar" Text="CONTINUAR" HorizontalOptions="FillAndExpand" Clicked="ContinuarClicked"/>
+		<Grid Padding="0">
+			<Image Source="modificarbackground.jpg" Scale="1.1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Aspect="AspectFill" />
+			<BoxView x:Name="Background">
+			</BoxView>
+			<Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="1*" />
+					<RowDefinition Height="Auto" />
+				</Grid.RowDefinitions>
+				<Label Grid.Row="0" Text="IDIOMAS" HorizontalTextAlignment="Center" FontSize="20" Margin="0,20,0,0" />
+				<ScrollView Grid.Row="1" x:Name="_scrollView" VerticalOptions="FillAndExpand">
+					<!--CHECKS-->
+				</ScrollView>
+				<Button Grid.Row="2" x:Name="Continuar" Text="CONTINUAR" HorizontalOptions="FillAndExpand" BackgroundColor="#003464" TextColor="White" Clicked="ContinuarClicked" Margin="40,0,40,10" />
+			</Grid>
 		</Grid>
 	</ContentPage.Content>
 </ContentPage>

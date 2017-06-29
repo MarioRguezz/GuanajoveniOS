@@ -26,22 +26,28 @@ namespace Guanajoven
 						break;
 					case DrawerPage.CodigoView:
 						//Detail.Navigation.PushAsync(new GuanajovenCodePage());
-						Detail = new NavigationPage(new GuanajovenCodePage());
+						Detail = new NavigationPage(new GuanajovenCodePage(this));
 						break;
 					case DrawerPage.Cerrar:
-						//Cerrar Sesión 
+						var user = PropertiesManager.GetUserInfo();
+						if (user != null)
+						{
+							PropertiesManager.LogOut();
+							//await new Navigation.PushModalAsync(new RootPage());
+							Navigation.PushModalAsync(new NavigationPage(new RootPage()));
+						}
 						break;
 					case DrawerPage.EventosView:
 						//Detail.Navigation.PushAsync(new EventsView());
-						Detail = new NavigationPage(new EventsView());
+						Detail = new NavigationPage(new EventsView(this));
 						break;
 					case DrawerPage.ConvocatoriasView:
-						Detail = new NavigationPage(new CallPage());
+						Detail = new NavigationPage(new CallPage(this));
 						break;
 					case DrawerPage.CalendarioView:
 						//Detail.Navigation.PushAsync(new CalendarPage());
 
-						Detail = new NavigationPage(new CalendarPage());
+						Detail = new NavigationPage(new CalendarPage(this));
 						break;
 					case DrawerPage.NotificacionesView:
 						//Detail.Navigation.PushAsync(new NotificationPage());
@@ -56,7 +62,7 @@ namespace Guanajoven
 					case DrawerPage.ChatView:
 						//Detail.Navigation.PushAsync(new ());
 
-						Detail = new NavigationPage(new ChatPage());
+						Detail = new NavigationPage(new ChatPage(this));
 						break;
 					case DrawerPage.RegionesView:
 						//Detail.Navigation.PushAsync(new ());

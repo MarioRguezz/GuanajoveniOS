@@ -59,6 +59,52 @@ namespace Guanajoven
 			//await Navigation.PushModalAsync(new AdvertisingPage());
 		}
 
+		async void GuanajovenClicked(object sender, EventArgs args)
+		{
+			var image = sender as Image;
+			image.Opacity = 0.6;
+			await Navigation.PushAsync(new GuanajovenCodePage(RootPage));
+		}
+
+		async void EventosClicked(object sender, EventArgs args)
+		{
+			var image = sender as Image;
+			image.Opacity = 0.6;
+			await Navigation.PushAsync(new EventsView(RootPage));
+		}
+
+		async void CheckClicked(object sender, EventArgs args)
+		{
+			var image = sender as Image;
+			image.Opacity = 0.6;
+			await Navigation.PushAsync(new CalendarPage(RootPage));
+		}
+
+		async void ConvocaClicked(object sender, EventArgs args)
+		{
+			var image = sender as Image;
+			image.Opacity = 0.6;
+			await Navigation.PushAsync(new CallPage(RootPage));
+		}
+
+		async void RedClicked(object sender, EventArgs args)
+		{
+			var image = sender as Image;
+			image.Opacity = 0.6;
+			await Navigation.PushAsync(new SocialMediaPage(RootPage));
+		}
+
+		async void ChatClicked(object sender, EventArgs args)
+		{
+			var image = sender as Image;
+			image.Opacity = 0.6;
+			await Navigation.PushAsync(new ChatPage(RootPage));
+		}
+
+
+
+
+
 
 		void SignUpClicked(object sender, EventArgs args)
 		{

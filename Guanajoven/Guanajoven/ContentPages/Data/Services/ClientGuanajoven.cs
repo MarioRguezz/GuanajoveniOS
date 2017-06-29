@@ -27,7 +27,7 @@ namespace Guanajoven
 		}
 
 
-
+		//Return data curp 
 		public static async Task<string> getCurp(string curp)
 		{
 			var jsonResponse = await PostObject<Curp>(new Curp()
@@ -41,7 +41,166 @@ namespace Guanajoven
 			}
 
 			return jsonResponse;
-		} 
+		}
+
+
+		public static async Task<string> registerUser(UsuarioPOJO user)
+		{
+			var jsonResponse = await PostObject<UsuarioPOJO>(new UsuarioPOJO()
+			{
+				email = user.email,
+				password = user.password,
+				confirmar_password = user.confirmar_password,
+				apellido_materno = user.apellido_materno,
+				apellido_paterno = user.apellido_paterno,
+				nombre = user.nombre,
+				genero = user.genero,
+				curp = user.curp,
+				fecha_nacimiento = user.fecha_nacimiento,
+				codigo_postal = user.codigo_postal,
+				estado_nacimiento = user.estado_nacimiento,
+				ruta_imagen = user.ruta_imagen,
+				id_google = null,  //before and working was ""
+				id_facebook = null
+			}, WEB_METHODS.Register);
+			if (jsonResponse == null)
+			{
+				return null;
+			}
+			return jsonResponse;
+		}
+
+
+		public static async Task<string> signin(string email, string password)
+		{
+			var jsonResponse = await PostObject<UsuarioPOJO>(new UsuarioPOJO()
+			{
+				email = email,
+				password = password
+			}, WEB_METHODS.Login);
+			if (jsonResponse == null)
+			{
+				return null;
+			}
+			return jsonResponse;
+		}
+
+
+		public static async Task<string> recoverpass(string email)
+		{
+			var jsonResponse = await PostObject<UsuarioPOJO>(new UsuarioPOJO()
+			{
+				email = email
+			}, WEB_METHODS.ForgotPass);
+			if (jsonResponse == null)
+			{
+				return null;
+			}
+			return jsonResponse;
+		}
+
+		/**
+		* Verifica si el correo ya está registrado en la BD
+		* @param email
+		* @return
+
+@POST("usuarios/verificarcorreo")
+Call<Response<Boolean>> verificarCorreo(
+			@Query("email") String email
+); */
+
+		public static async Task<string> verifyemail(string email)
+		{
+			var jsonResponse = await PostObject<UsuarioPOJO>(new UsuarioPOJO()
+			{
+				email = email
+			}, WEB_METHODS.VerifyEmail);
+			if (jsonResponse == null)
+			{
+				return null;
+			}
+			return jsonResponse;
+		}
+
+		/**
+     * Funcionalidad para logueo utilizando cuenta de Google.
+     * @param email
+     * @param idGoogle
+     * @return
+	@POST("usuarios/logingoogle")
+
+	Call<Response<Usuario>> loginGoogle(
+			@Query("email") String email,
+			@Query("id_google") String idGoogle
+    );
+*/
+		public static async Task<string> loginGoogle(string email, string id_google)
+		{
+			var jsonResponse = await PostObject<UsuarioPOJO>(new UsuarioPOJO()
+			{
+				email = email,
+				id_google = id_google
+			}, WEB_METHODS.Google);
+			if (jsonResponse == null)
+			{
+				return null;
+			}
+			return jsonResponse;
+		}
+
+
+		/**
+		 * Funcionalidad para logueo utilizando cuenta de Facebook
+		 * @param email
+		 * @param idFacebook
+		 * @return
+		@POST("usuarios/loginfacebook")
+
+		Call<Response<Usuario>> loginFacebook(
+				@Query("email") String email,
+				@Query("id_facebook") String idFacebook
+		); */
+
+		public static async Task<string> loginFacebook(string email, string id_facebook)
+		{
+			var jsonResponse = await PostObject<UsuarioPOJO>(new UsuarioPOJO()
+			{
+				email = email,
+				id_facebook = id_facebook
+			}, WEB_METHODS.Facebook);
+			if (jsonResponse == null)
+			{
+				return null;
+			}
+			return jsonResponse;
+		}
+
+
+	/**
+     * Método para actualizar el token Guanajoven del código QR
+     * @param apiToken
+     * @return
+	@POST("usuarios/actualizar-token-guanajoven")
+
+	Call<Response<String>> actualizarTokenGuanajoven(
+			@Query("api_token") String apiToken
+    );
+     */
+
+		public static async Task<string> getToken(string  api_token)
+		{
+			var jsonResponse = await PostObject<TokenPOJO>(new TokenPOJO()
+			{
+				api_token = api_token
+			}, WEB_METHODS.TokenGuanajoven);
+			if (jsonResponse == null)
+			{
+				return null;
+			}
+			return jsonResponse;
+		}
+
+
 		/*
      * Funciona
      * @param usr_lat

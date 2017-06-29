@@ -4,11 +4,13 @@ namespace Guanajoven
 	public enum WEB_METHODS
 	{
 		Curp,
-		GetMensajeros,
-		Promociones,
-		Destination,
-		Update,
+		Register,
 		Login,
+		ForgotPass,
+		VerifyEmail,
+		Google,
+		Facebook,
+		TokenGuanajoven,
 		Registro,
 		Solicitar,
 		Cancelar,
@@ -32,7 +34,7 @@ namespace Guanajoven
 	{
 		//	public static string URL = "http://189.211.207.173/courier/public/";
 		//public static string URL = "http://10.0.7.134/GuanajovenWeb/public/api/";
-		public static string URL = "http://200.23.39.11/GuanajovenWeb/public/api/";
+		public static string URL = "http://localhost/GuanajovenWeb/public/api/";
 
 		/*
 		private static Realm realm;
@@ -50,18 +52,20 @@ namespace Guanajoven
 			{
 				case WEB_METHODS.Curp:
 					return "usuarios/curp";
-				case WEB_METHODS.Promociones:
-					return "user/apply-promo";
-				case WEB_METHODS.Destination:
-					return "user/setdestination";
-				case WEB_METHODS.Update:
-					return "user/update";
+				case WEB_METHODS.Register:
+					return "usuarios/registrar";
 				case WEB_METHODS.Login:
-					return "user/login";
-				case WEB_METHODS.Registro:
-					return "user/register";
-				case WEB_METHODS.Solicitar:
-					return "user/createrequestproviders";
+					return "usuarios/login";
+				case WEB_METHODS.ForgotPass:
+					return "password/email";
+				case WEB_METHODS.VerifyEmail:
+					return "usuarios/verificarcorreo";
+				case WEB_METHODS.Google:
+					return "usuarios/logingoogle";
+				case WEB_METHODS.Facebook:
+					return "usuarios/loginfacebook";
+				case WEB_METHODS.TokenGuanajoven:
+					return "usuarios/actualizar-token-guanajoven";
 				case WEB_METHODS.Cancelar:
 					return "user/cancelrequest";
 				case WEB_METHODS.Request:

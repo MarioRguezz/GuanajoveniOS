@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Guanajoven.RootPage">
 	<ContentPage.Content>
 		<Grid Padding="0">
-			<Image Source="background2.jpg"  Scale="1.1"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Aspect="AspectFill" />
+			<Image Source="rootbackground.jpg"  Scale="1.1"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Aspect="AspectFill" />
 			<BoxView x:Name="Background">   </BoxView>
 			<Grid Margin="30,60,30,10">
 				<Grid.RowDefinitions>

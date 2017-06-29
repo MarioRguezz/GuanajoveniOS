@@ -321,6 +321,15 @@
     <BundleResource Include="Resources\menuburguer.png" />
     <BundleResource Include="Resources\checkbox_off.png" />
     <BundleResource Include="Resources\checkbox_on.png" />
+    <BundleResource Include="Resources\convocatoriabackground.jpg" />
+    <BundleResource Include="Resources\menubackground.jpg" />
+    <BundleResource Include="Resources\rootbackground.jpg" />
+    <BundleResource Include="Resources\registrobackground.jpg" />
+    <BundleResource Include="Resources\modificarbackground.jpg" />
+    <BundleResource Include="Resources\eventosbackground.jpg" />
+    <BundleResource Include="Resources\notificacionbackground.jpg" />
+    <BundleResource Include="Resources\regionesbackground.jpg" />
+    <BundleResource Include="Resources\modificarbackground2.jpg" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamarin.mobile">
@@ -329,6 +338,14 @@
     </XamarinComponentReference>
     <XamarinComponentReference Include="btprogresshud">
       <Version>1.20</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="zxing.net.mobile">
+      <Version>2.1.12</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="zxing.net.mobile.forms">
+      <Version>2.1.12</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>

@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 namespace Guanajoven
 {
 
-	public class Estado
+	public class EstadoNacimiento
 	{
 		public int? id_estado { get; set; }
 		public string nombre { get; set; }
@@ -16,3 +16,7 @@ namespace Guanajoven
 	}
 
 }
+
+
+
+

@@ -7,9 +7,11 @@ namespace Guanajoven
 {
 	public partial class CallPage : BasePage
 	{
-		public CallPage()
+		HomeDrawerPage RootPage;
+		public CallPage(HomeDrawerPage _rootPage)
 		{
 			InitializeComponent();
+			RootPage = _rootPage;
 			NavigationPage.SetHasNavigationBar(this, false);
 		}
 

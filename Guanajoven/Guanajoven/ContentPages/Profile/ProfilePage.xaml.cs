@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Threading.Tasks;
+using Newtonsoft.Json;
 using Xamarin.Forms;
 
 namespace Guanajoven
@@ -74,11 +75,74 @@ namespace Guanajoven
 
 		}
 
-		async void SignUpClicked(object sender, System.EventArgs e)
+		async void ModifyClicked(object sender, System.EventArgs e)
 		{
-			//await Navigation.PushModalAsync(new SignUpPage());
+			DatosUsuario user = new DatosUsuario();
+			user.id_nivel_estudios = "";
+			user.id_pueblo_indigena = "";
+			user.id_capacidad_diferente = "";
+			user.premios = "";
+			user.proyectos_sociales = "";
+			user.apoyo_proyectos_sociales = "";
+
+			/*
+			var email = _email.Text;
+			var password = _password.Text;
+			var confirmarPassword = _confirmpassword.Text;
+			var curp = _curp.Text;
+			var apellidoPaterno = _apellidpat.Text;
+			var apellidoMaterno = _apellidmat.Text;
+			var nombre = _nombre.Text;
+			var genero = getGenre(pickergenre);
+			var fechaNacimiento = fecha_nac.Text;
+			var codigoPostal = _cp.Text;
+			var estadoNacimiento = abrevEstado(pickerstate);
+			var rutaImagen = aux;
+			UsuarioPOJO user = new UsuarioPOJO();
+			user.email = email;
+			user.password = password;
+			user.confirmar_password = confirmarPassword;
+			user.curp = curp;
+			user.apellido_paterno = apellidoPaterno;
+			user.apellido_materno = apellidoMaterno;
+			user.nombre = nombre;
+			user.genero = genero + "";
+			user.fecha_nacimiento = fechaNacimiento;
+			user.codigo_postal = codigoPostal;
+			user.estado_nacimiento = estadoNacimiento;
+			user.ruta_imagen = rutaImagen;
+			user.id_google = null;
+			user.id_facebook = null;
+			ShowProgress("Validando");
+			var response = await ClientGuanajoven.registerUser(user);
+
+			if (ValidateResponseRegister(response))
+			{
+				var newuser = JsonConvert.DeserializeObject<ResponseUsuario>(response);
+				PropertiesManager.SaveUserInfo(newuser);
+				ShowProgress(IProgressType.LogedIn);
+				await Task.Delay(600);
+				HideProgress();
+				await Navigation.PushModalAsync(new HomeDrawerPage());
+			}
+
+			HideProgress();
 		}
 
+
+		bool ValidateResponseRegister(string response)
+		{
+			if (ClientGuanajoven.IsError(response))
+			{
+				DisplayAlert("Error", "Hubo un problema al registrarse", "Aceptar");
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+			*/
+		}
 
 
 		#endregion

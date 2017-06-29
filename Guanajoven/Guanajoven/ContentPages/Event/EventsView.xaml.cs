@@ -7,9 +7,11 @@ namespace Guanajoven
 {
 	public partial class EventsView : BasePage
 	{
-		public EventsView()
+		HomeDrawerPage RootPage;
+		public EventsView(HomeDrawerPage _rootPage)
 		{
 			InitializeComponent();
+			RootPage = _rootPage;
 			NavigationPage.SetHasNavigationBar(this, false);
 		}
 

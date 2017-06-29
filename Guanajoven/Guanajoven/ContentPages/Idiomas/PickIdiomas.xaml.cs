@@ -12,7 +12,7 @@ namespace Guanajoven
 		public PickIdiomas()
 		{
 			InitializeComponent();
-
+			Background.BackgroundColor = Color.FromHex("#b7C7E1F5");
 			SetIdiomas();
 
 			NavigationPage.SetHasNavigationBar(this, false);
@@ -21,15 +21,19 @@ namespace Guanajoven
 		void SetIdiomas()
 		{
 			var list = new List<string>()
-			{
-				"Inglés",
-				"Español",
-				"Francés",
-				"Italiano",
-				"Aleman",
-				"Chino",
-				"Totonaca",
-			};
+			{"Alemán",
+			 "Árabe",
+			 "Chino",
+			 "Coreano",
+		     "Francés",
+			 "Inglés",
+			 "Italiano",
+		 	 "Japonés",
+			 "Polaco",
+	 	 	 "Portugués",
+		     "Ruso",
+			 "Otro"
+				};
 
 			_checks = new CheckBoxGroup(list.ToArray());
 
@@ -57,9 +61,10 @@ namespace Guanajoven
 			{
 				await Navigation.PushAsync(new CarouselPageIdiomas(res));
 			}
-			else {
+			else
+			{
 				//
-				await DisplayAlert("", "Elige al menos un idioma", "Ok");
+				await DisplayAlert("Guanajoven", "Elige al menos un idioma", "Aceptar");
 			}
 
 		}

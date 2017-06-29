@@ -7,9 +7,11 @@ namespace Guanajoven
 {
 	public partial class ChatPage : ContentPage
 	{
-		public ChatPage()
+		HomeDrawerPage RootPage;
+		public ChatPage(HomeDrawerPage _rootPage)
 		{
 			InitializeComponent();
+			RootPage = _rootPage;
 		}
 	}
 }

@@ -33,102 +33,103 @@ namespace Guanajoven
 		{
 			_rootPage = rootPage;
 			InitializeComponent();
-
-			Title = " ";
-
-			/*	if (App.CurrentApp.User != null)
-				{
-					_labelNombre.Text += " " + App.CurrentApp.User.Nombre + " " + App.CurrentApp.User.Apellido_Paterno;
-				}*/
-
-
-
-			ListView.ItemsSource = PageTypeGroup.All;
-
-			ListView.ItemSelected += (sender, e) =>
+			var user = PropertiesManager.GetUserInfo();
+			if (user != null)
 			{
-				if (e.SelectedItem == null)
-					return;
-				var item = e.SelectedItem as ItemDrawer;
-				if (PageSelected != null)
-					PageSelected(item.Page);
+				_imageView.Source = user.data.datos_usuario.ruta_imagen;
+				_email.Text = user.data.email;
+				_nombre.Text = user.data.datos_usuario.nombre;
+			}
+
+				Title = " ";
+
+				ListView.ItemsSource = PageTypeGroup.All;
+
+				ListView.ItemSelected += (sender, e) =>
+				{
+					if (e.SelectedItem == null)
+						return;
+					var item = e.SelectedItem as ItemDrawer;
+					if (PageSelected != null)
+						PageSelected(item.Page);
 
 				/*foreach (var n in PageTypeGroup.All)
 				{
 					n.Selected = false;
 				}*/
-				item.Selected = true;
-				ListView.ItemsSource = PageTypeGroup.All;
-				ListView.SelectedItem = null;
-			};
+					item.Selected = true;
+					ListView.ItemsSource = PageTypeGroup.All;
+					ListView.SelectedItem = null;
+				};
 
-			ImageSourceChanged = async () =>
-			{
-				if (LastView is FFImageLoading.Forms.CachedImage)
-					(LastView as FFImageLoading.Forms.CachedImage).Source = Source;
+				ImageSourceChanged = async () =>
+				{
+					if (LastView is FFImageLoading.Forms.CachedImage)
+						(LastView as FFImageLoading.Forms.CachedImage).Source = Source;
 
-				_imageView.Source = Source;
+					_imageView.Source = Source;
 
 				//await PostLastFoto();
 			};
 
 
-			//ImagesUploaded += (folio) =>
-			//{
-			//	ActualizarFotoCliente(folio);
-			//};
+				//ImagesUploaded += (folio) =>
+				//{
+				//	ActualizarFotoCliente(folio);
+				//};
 
-			//MessagingCenter.Subscribe<PerfilPage>(this, "update_info_user", (sender) =>
-			//{
-			//		// do something whenever the "Hi" message is sent
-			//		if (App.CurrentApp.User != null)
-			//		_labelNombre.Text = App.CurrentApp.User.Nombre;
-			//	GetFoto();
-			//});
+				//MessagingCenter.Subscribe<PerfilPage>(this, "update_info_user", (sender) =>
+				//{
+				//		// do something whenever the "Hi" message is sent
+				//		if (App.CurrentApp.User != null)
+				//		_labelNombre.Text = App.CurrentApp.User.Nombre;
+				//	GetFoto();
+				//});
 
-			GetFoto();
-		}
+				GetFoto();
+			}
 
-		async void GetFoto()
+			async void GetFoto()
 		{
-			//try
-			//{
-			//	var cliente = App.CurrentApp.User;
-			//	var n = await App.CurrentApp.Services.GetFotos(new List<string>() { "" + cliente.Foto });
-			//	if (n != null && n.Count > 0)
-			//	{
-			//		var str = n[0].ArchivoURL;
-			//		str = str.Replace("http://www.totalcase.com.mx/Uploads/TTArchivos/", Configuration.BaseURL + "Uploads/TTArchivos/");
-			//		_imageView.Source = str;
-			//	}
-			//}
-			//catch
-			//{
+				//try
+				//{
+				//	var cliente = App.CurrentApp.User;
+				//	var n = await App.CurrentApp.Services.GetFotos(new List<string>() { "" + cliente.Foto });
+				//	if (n != null && n.Count > 0)
+				//	{
+				//		var str = n[0].ArchivoURL;
+				//		str = str.Replace("http://www.totalcase.com.mx/Uploads/TTArchivos/", Configuration.BaseURL + "Uploads/TTArchivos/");
+				//		_imageView.Source = str;
+				//	}
+				//}
+				//catch
+				//{
 
-			//}
-		}
+				//}
+			}
 
-		async void ActualizarFotoCliente(int folio)
+			async void ActualizarFotoCliente(int folio)
 		{
-			//var cliente = GetCliente();
-			//cliente.Foto = folio;
+				//var cliente = GetCliente();
+				//cliente.Foto = folio;
 
-			//var resp = await App.CurrentApp.Services.PutObjectToTable<Cliente>(cliente, cliente.Folio + "", Cliente.TABLE_NAME);
+				//var resp = await App.CurrentApp.Services.PutObjectToTable<Cliente>(cliente, cliente.Folio + "", Cliente.TABLE_NAME);
 
-			//if (resp == 0)
-			//{
+				//if (resp == 0)
+				//{
 
-			//}
-			//else
-			//{
+				//}
+				//else
+				//{
 
-			//}
-		}
+				//}
+			}
 
-		async void ChangePicture(object sender, EventArgs e)
-		{
-			TakePictureActionSheet(_imageView);
-		}
+			async void ChangePicture(object sender, EventArgs e)
+	
+			{
+				TakePictureActionSheet(_imageView);
+			}
 
 		void MenuClicked(object sender, System.EventArgs e)
 		{
@@ -194,7 +195,7 @@ namespace Guanajoven
 			{
 				new ItemDrawer("Eventos", DrawerPage.EventosView, "event.png"),
 				new ItemDrawer("Convocatorias", DrawerPage.ConvocatoriasView, "convocatorias.png"),
-				new ItemDrawer("Calendario de eventos", DrawerPage.CalendarioView, "calendar.png"),
+				//new ItemDrawer("Calendario de eventos", DrawerPage.CalendarioView, "calendar.png"),
 				new ItemDrawer("Notificaciones", DrawerPage.NotificacionesView, "notificacion.png"),
 				new ItemDrawer("Redes sociales", DrawerPage.RedesSocialesView, "socialmedia.png"),
 				new ItemDrawer("Chat", DrawerPage.ChatView, "chat.png")
