@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace Guanajoven
 {
 	public interface IProgress

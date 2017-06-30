@@ -15,7 +15,7 @@ namespace Guanajoven
 		async void Start(object sender, System.EventArgs e)
 		{
 			PropertiesManager.SaveFirstArrive();
-			await Navigation.PushModalAsync(new RootPage());
+			await Navigation.PushModalAsync(new NavigationPage(new RootPage()));
 		}
 	}
 }

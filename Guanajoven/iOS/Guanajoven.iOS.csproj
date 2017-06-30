@@ -76,6 +76,7 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
+    <CodesignProvision>ttech280516</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -143,12 +144,6 @@
     <Reference Include="Xamarin.Auth.XamarinForms">
       <HintPath>..\packages\Xamarin.Auth.XamarinForms.1.5.0.1\lib\Xamarin.iOS10\Xamarin.Auth.XamarinForms.dll</HintPath>
     </Reference>
-    <Reference Include="BTProgressHUD">
-      <HintPath>..\Components\btprogresshud-1.20\lib\ios-unified\BTProgressHUD.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Mobile">
-      <HintPath>..\Components\xamarin.mobile-0.7.7\lib\ios-unified\Xamarin.Mobile.dll</HintPath>
-    </Reference>
     <Reference Include="ZXing.Net.Mobile.Core">
       <HintPath>..\packages\ZXing.Net.Mobile.2.2.9\lib\Xamarin.iOS10\ZXing.Net.Mobile.Core.dll</HintPath>
     </Reference>
@@ -163,6 +158,12 @@
     </Reference>
     <Reference Include="ZXing.Net.Mobile.Forms.iOS">
       <HintPath>..\packages\ZXing.Net.Mobile.Forms.2.2.9\lib\Xamarin.iOS10\ZXing.Net.Mobile.Forms.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="BTProgressHUD">
+      <HintPath>..\Components\btprogresshud-1.20\lib\ios-unified\BTProgressHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Mobile">
+      <HintPath>..\Components\xamarin.mobile-0.7.7\lib\ios-unified\Xamarin.Mobile.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -197,6 +198,7 @@
     <Compile Include="Renders\BorderlessEntryImpl.cs" />
     <Compile Include="Xamarin.Auth\AppDelegate.OpenUrl.cs" />
     <Compile Include="Providers\BarcodeService.cs" />
+    <Compile Include="Providers\PushNotifications.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ayuda.png" />

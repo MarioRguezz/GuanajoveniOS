@@ -1,26 +1,20 @@
 ﻿<Properties StartupConfiguration="{1315BADC-5285-4B5D-9045-6A9B41469E54}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Guanajoven/ContentPages/Idiomas/SetInfoIdioma.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/AppDelegate.cs">
     <Files>
-      <File FileName="Guanajoven/ContentPages/Profile/ProfilePage.xaml" Line="93" Column="117" />
-      <File FileName="Guanajoven/ContentPages/Profile/ProfilePage.xaml.cs" Line="86" Column="28" />
-      <File FileName="Guanajoven/ContentPages/Login/SignUpPage.xaml.cs" Line="269" Column="3" />
-      <File FileName="Guanajoven/ContentPages/Data/Models/DatosUsuario.cs" Line="9" Column="27" />
-      <File FileName="Guanajoven/ContentPages/Idiomas/CarouselPageIdiomas.cs" Line="16" Column="33" />
-      <File FileName="Guanajoven/ContentPages/Idiomas/SetInfoIdioma.xaml" Line="6" Column="33" />
-      <File FileName="Guanajoven/ContentPages/Idiomas/IdiomaItemView.xaml" Line="1" Column="1" />
-      <File FileName="Guanajoven/ContentPages/Idiomas/HelperIdioma.cs" Line="1" Column="1" />
-      <File FileName="Guanajoven/ContentPages/Idiomas/PickIdiomas.xaml" Line="1" Column="1" />
-      <File FileName="Guanajoven/ContentPages/Idiomas/SetInfoIdioma.xaml.cs" Line="19" Column="60" />
+      <File FileName="iOS/AppDelegate.cs" Line="66" Column="3" />
+      <File FileName="Guanajoven/App.xaml.cs" Line="46" Column="24" />
+      <File FileName="iOS/Main.cs" Line="17" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/oscar/Work/GuanaJoven/Guanajoven/Guanajoven/ContentPages/Profile/ProfilePage.xaml.cs" line="49" column="18" />
-      <Breakpoint file="/Users/marioalbertonegreterodriguez/Projects/Guanajoven/Guanajoven/ContentPages/Login/SignUpPage.xaml.cs" relfile="Guanajoven/ContentPages/Login/SignUpPage.xaml.cs" line="130" column="26" />
+      <Breakpoint file="/Users/oscar/Work/GuanaJoven/Guanajoven/iOS/Providers/BarcodeService.cs" relfile="iOS/Providers/BarcodeService.cs" line="28" column="1" />
+      <Breakpoint file="/Users/oscar/Work/GuanaJoven/Guanajoven/Guanajoven/App.xaml.cs" relfile="Guanajoven/App.xaml.cs" line="82" column="30" />
+      <Breakpoint file="/Users/oscar/Work/GuanaJoven/Guanajoven/iOS/AppDelegate.cs" relfile="iOS/AppDelegate.cs" line="64" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Guanajoven.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D516CC0F-1EEB-4194-BF63-504EF0E6C504" />
+  <MonoDevelop.Ide.ItemProperties.Guanajoven.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.681C8999-EB63-4084-BC6C-4D6664D08263" />
 </Properties>

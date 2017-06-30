@@ -7,7 +7,8 @@ namespace Guanajoven
 	public class CarouselPageIdiomas : Xamarin.Forms.CarouselPage
 	{
 
-		List<string> Idiomas;
+		public static List<string> Idiomas;
+
 		public CarouselPageIdiomas(List<string> idiomas)
 		{
 			Idiomas = idiomas;
@@ -47,7 +48,7 @@ namespace Guanajoven
 				CurrentPage = Children[n + 1];
 			else {
 
-				if (HelperIdioma.InfioIdiomas.Count > 0)
+				if (HelperIdioma.InfioIdiomas.Count == Idiomas.Count)
 				{
 					System.Diagnostics.Debug.WriteLine("INFO IDIOMAS:");
 					foreach (var item in HelperIdioma.InfioIdiomas)
@@ -60,6 +61,24 @@ namespace Guanajoven
 
 
 					await Navigation.PopModalAsync();
+				}
+				else
+				{
+					var index = 0;
+					var str = "";
+
+					foreach (var i in Idiomas)
+					{
+						if (!HelperIdioma.InfioIdiomas.ContainsKey(i))
+						{
+							str += i+" ";
+							index = Idiomas.IndexOf(i);
+						}
+					}
+
+					await DisplayAlert("","Ingresa la información de "+str,"Ok");
+
+					CurrentPage = Children[index];
 				}
 			}
 

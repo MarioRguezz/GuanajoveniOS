@@ -211,6 +211,7 @@
     <Compile Include="ContentPages\Data\Models\EstadoNacimiento.cs" />
     <Compile Include="ContentPages\Data\Models\TokenPOJO.cs" />
     <Compile Include="ContentPages\Data\Models\CodigoPOJO.cs" />
+    <Compile Include="Providers\IPushNotifications.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

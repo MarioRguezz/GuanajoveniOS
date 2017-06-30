@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 //using Realms;
 using Xamarin.Forms;
@@ -9,6 +9,8 @@ namespace Guanajoven
 	{
 
 		public static App CurrentApp { get; set; }
+		public bool FromRemoteNotification { get; set; }
+		public string DeviceToken { get; set; }
 
 		public App()
 		{
@@ -54,21 +56,35 @@ namespace Guanajoven
 				{
 
 					//MainPage = new NavigationPage(new RootPage());
-					MainPage = new NavigationPage(new RootPage());
-				//	MainPage = new NavigationPage(new PickIdiomas());
+					MainPage = new NavigationPage(new HomeDrawerPage());
+					//	MainPage = new NavigationPage(new PickIdiomas());
 				}
 			}
 
 
+			InitPushNotifications();
+		}
 
-
-
+		public void InitPushNotifications()
+		{
+			DependencyService.Get<IPushNotifications>().Register();
 		}
 
 		protected override void OnStart()
 		{
 			// Handle when your app starts
 			//UpdateUserStatus();
+		}
+
+		public void SaveToken(string deviceToken, int OS)
+		{
+
+			DeviceToken = deviceToken;
+
+			if (OS == 2)
+			{
+				//IOS
+			}
 		}
 
 		/*public async void UpdateUserStatus()

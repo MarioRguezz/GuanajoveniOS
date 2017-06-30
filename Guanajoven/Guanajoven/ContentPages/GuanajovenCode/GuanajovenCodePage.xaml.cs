@@ -48,8 +48,10 @@ namespace Guanajoven
 					HideProgress();
 				}
 			}
-			var stream = DependencyService.Get<IBarcodeService>().ConvertImageStream(token);
-			_qrImage.Source = ImageSource.FromStream(() => { return stream; });
+			if(!string.IsNullOrEmpty(token)){
+var stream = DependencyService.Get<IBarcodeService>().ConvertImageStream(token);
+_qrImage.Source = ImageSource.FromStream(() => { return stream; });
+			}
 
 		}
 		bool ValidateResponse(string response)
