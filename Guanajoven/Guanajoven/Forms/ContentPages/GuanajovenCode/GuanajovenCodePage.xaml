@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BasePage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Guanajoven.GuanajovenCodePage" xmlns:local="clr-namespace:Guanajoven;assembly=Guanajoven" xmlns:i18n="clr-namespace:Guanajoven;assembly=Guanajoven" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations">
+	<local:BasePage.Content>
+		<StackLayout Orientation="Vertical">
+			<StackLayout x:Name="_topContainer" HorizontalOptions="FillAndExpand" Spacing="5" VerticalOptions="Start" Padding="8" IsVisible="true" Orientation="Horizontal" BackgroundColor="#003464" HeightRequest="46">
+				<Image Source="ic_menu_white_24dp.png" HorizontalOptions="StartAndExpand" Margin="0,10,0,0" HeightRequest="30" WidthRequest="30" VerticalOptions="Center">
+					<Image.GestureRecognizers>
+						<TapGestureRecognizer Tapped="MenuClicked" />
+					</Image.GestureRecognizers>
+				</Image>
+				<Image Source="download.png" HorizontalOptions="End" Margin="0,10,0,0" HeightRequest="30" WidthRequest="30" VerticalOptions="Center">
+					<Image.GestureRecognizers>
+						<TapGestureRecognizer Tapped="DownloadClicked" />
+					</Image.GestureRecognizers>
+				</Image>
+			</StackLayout>
+			<Frame Margin="10" Padding="0" VerticalOptions="FillAndExpand" HasShadow="true">
+				<Frame.Content>
+					<Grid Padding="0">
+						<Image Source="" x:Name="_background" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Aspect="AspectFill" />
+						<BoxView x:Name="Background">
+						</BoxView>
+						<StackLayout Orientation="Vertical">
+							<Grid Padding="0">
+								<Image Source="background_codigo_guanajoven.PNG"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Aspect="AspectFill" />
+								<StackLayout Orientation="Horizontal">
+									<Image Source="letras_codigo_guanajoven.png" Margin="20,5,0,10" Aspect="AspectFit" HeightRequest="40" WidthRequest="40" HorizontalOptions="FillAndExpand" />
+									<Image Source="logo.png" Margin="20,5,0,10" Aspect="AspectFit" HeightRequest="40" WidthRequest="40" HorizontalOptions="EndAndExpand" />
+									<!--<StackLayout Orientation="Vertical">
+										<Label Margin="0,15,0,0" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" FontAttributes="Bold" Text="Código" TextColor="#B23F62" />
+										<Label Margin="0,-5,0,0" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" FontAttributes="Bold" Text="Guanajoven" TextColor="#B23F62" />
+									</StackLayout>-->
+									<Image Source="logo_gto.png" Margin="0,5,10,10" Aspect="AspectFit" HeightRequest="40" WidthRequest="40" HorizontalOptions="EndAndExpand" />
+								</StackLayout>
+							</Grid>
+							<StackLayout Orientation="Vertical">
+								<Label Margin="0,0,0,0" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Text="Nombre" x:Name="_name" FontAttributes="Bold" TextColor="#003464" />
+								<Label Margin="0,0,0,0" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Text="Email" x:Name="_email" TextColor="#003464" />
+								<Label Margin="0,0,0,0" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Text="Código Guanajoven" FontAttributes="Bold" TextColor="#636363" />
+								<Label Margin="0,0,0,0" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Text="Número" FontAttributes="Bold" x:Name="_numero" TextColor="Black" />
+							</StackLayout>
+							<StackLayout Orientation="Vertical">
+								<Image x:Name="_qrImage" BackgroundColor="Transparent" />
+							</StackLayout>
+							<StackLayout Orientation="Vertical">
+								<Label Margin="0,0,0,0" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Text="CURP" x:Name="_CURP" FontAttributes="Bold" TextColor="#636363" />
+								<Label Margin="0,0,0,0" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Text="curp" x:Name="_curpcode" FontAttributes="Bold" TextColor="Black" />
+							</StackLayout>
+							<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+								<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+									<Label Margin="0,0,0,0" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" Text="Género" x:Name="_gen" FontAttributes="Bold" TextColor="#636363" />
+									<Label Margin="0,0,0,0" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" Text="Género" x:Name="_genre" FontAttributes="Bold" TextColor="Black" />
+									<Label Margin="0,0,0,0" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" Text="Municipio" x:Name="_mun" FontAttributes="Bold" TextColor="#636363" />
+									<Label Margin="0,0,0,0" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" Text="Municipio" x:Name="_municipio" FontAttributes="Bold" TextColor="Black" />
+								</StackLayout>
+								<StackLayout Orientation="Vertical">
+									<Label Margin="0,0,0,0" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand" Text="Fecha de nacimiento" x:Name="_fechanac" FontAttributes="Bold" TextColor="#636363" />
+									<Label Margin="0,0,0,0" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand" Text="Fecha de nacimiento" x:Name="_fechanacimiento" FontAttributes="Bold" TextColor="Black" />
+									<Label Margin="0,0,0,0" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand" Text="Estado de nacimiento" x:Name="_estadonac" FontAttributes="Bold" TextColor="#636363" />
+									<Label Margin="0,0,0,0" HorizontalTextAlignment="End" HorizontalOptions="EndAndExpand" Text="Estado de nacimiento" x:Name="_estadonacimiento" FontAttributes="Bold" TextColor="Black" />
+								</StackLayout>
+							</StackLayout>
+						</StackLayout>
+					</Grid>
+				</Frame.Content>
+			</Frame>
+		</StackLayout>
+	</local:BasePage.Content>
+</local:BasePage>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BasePage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Guanajoven.DetailEventPage" xmlns:local="clr-namespace:Guanajoven" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations">
+	<ContentPage.Content>
+		<ScrollView>
+			<Grid Padding="10">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="1*" />
+					<RowDefinition Height="Auto" />
+				</Grid.RowDefinitions>
+				<Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+					<local:CustomMap x:Name="Map" Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsEnabled="false" IsShowingUser="true" MapType="Street" />
+					<Image HeightRequest="50" TranslationY="-15" VerticalOptions="Center" HorizontalOptions="Center" Source="pin.png" />
+					<BoxView HeightRequest="4" WidthRequest="4" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="#003464" />
+				</Grid>
+
+					<Grid Grid.Row="1" HorizontalOptions="FillAndExpand" ColumnSpacing="3">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto" />
+							<ColumnDefinition Width="1*" />
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto" />
+						</Grid.RowDefinitions>
+						<Label x:Name="_title" Text="Título" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,20,0,0" FontSize="20" FontAttributes="Bold" VerticalOptions="Center" TextColor="#B23F62" HorizontalOptions="FillAndExpand"
+							VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+						<Image Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Source="ic_place_white_24dp.png" />
+						<Label Grid.Row="1" Grid.Column="1" x:Name="_direccion" Text="Dirección del evento" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="14" TextColor="#636363"  VerticalOptions="Center" VerticalTextAlignment="Center" />
+						<Image Grid.Row="2" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Source="ic_description_32_px.png" />
+						<Label Grid.Row="2" Grid.Column="1" x:Name="_evento"  Text="Conferencia" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="14" TextColor="#636363" VerticalOptions="Center" VerticalTextAlignment="Center" />
+						<Image Grid.Row="3" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Source="ic_place_white_24dp.png" />
+						<Label Grid.Row="3" Grid.Column="1" x:Name="_fecha" Text="25-09-1992" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="14" TextColor="#636363"  VerticalOptions="Center" VerticalTextAlignment="Center" />
+
+						<Button Grid.Row="4" Grid.ColumnSpan="2" x:Name="_assistance" Clicked="EventoClicked" Text="Asistí al evento" TextColor="White" BackgroundColor="#003464" />
+					</Grid>
+
+				
+			</Grid>
+		</ScrollView>
+	</ContentPage.Content>
+</local:BasePage>

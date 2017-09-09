@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
@@ -7,7 +7,7 @@
 	<key>CFBundleName</key>
 	<string>Guanajoven</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.08bits.guanajoven</string>
+	<string>com.guanajuato.guanajoven</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -19,7 +19,6 @@
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>
-		<integer>2</integer>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
@@ -30,8 +29,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -63,12 +60,18 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>com.08bits.guanajoven</string>
-				<string>com.googleusercontent.apps.371600553371-ksut82ar9d3ljdp7rhvt82ktgcd8v22m</string>
-				<string>fb1176754645778022</string>
+				<string>com.googleusercontent.apps.706757253499-kpo06qfv90ehr4tfqu766u6tsm6dr5s9</string>
+				<string>fb1547755481949405</string>
 			</array>
 			<key>CFBundleURLTypes</key>
 			<string>Viewer</string>
 		</dict>
 	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<false/>
 </dict>
 </plist>

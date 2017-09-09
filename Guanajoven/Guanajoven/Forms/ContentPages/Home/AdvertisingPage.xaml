@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Guanajoven.AdvertisingPage"
+	xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations">
+	<ContentPage.Content>
+		<StackLayout Orientation="Vertical" BackgroundColor="Black" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+			<Image Source="ic_close_white_24dp.png" HeightRequest="40" Margin="0,15,15,0" HorizontalOptions="End" WidthRequest="25"  VerticalOptions="Start">
+				<Image.GestureRecognizers>
+					<TapGestureRecognizer Tapped="CloseClicked" />
+				</Image.GestureRecognizers>
+			</Image>
+			<ffimageloading:CachedImage Source="background1.jpg.png" x:Name="_advertisingImage" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" DownsampleToViewSize="true"/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

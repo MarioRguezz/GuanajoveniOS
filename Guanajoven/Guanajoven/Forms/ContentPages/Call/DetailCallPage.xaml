@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BasePage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Guanajoven.DetailCallPage" xmlns:local="clr-namespace:Guanajoven" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations" xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView">
+	<local:BasePage.Content>
+		<ScrollView>
+			<StackLayout Padding="10,5,10,5" Grid.Row="1" Orientation="Vertical">
+				<Image Grid.Row="0" x:Name="_image" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="" Margin="20" HeightRequest="250" />
+				<Label x:Name="_title" Text="Título" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="16" TextColor="#636363" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" />
+				<BoxView HeightRequest="1" BackgroundColor="#636363" Margin="0,5,0,5" HorizontalOptions="FillAndExpand" />
+				<StackLayout Orientation="Horizontal">
+					<Label HorizontalOptions="FillAndExpand" Text="Fecha de inicio: " FontSize="16" TextColor="#636363" />
+					<Label x:Name="_fechainicio" Text="fechainicio" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="14" TextColor="#636363" VerticalOptions="Center" VerticalTextAlignment="Center" />
+				</StackLayout>
+				<BoxView Grid.ColumnSpan="2" BackgroundColor="#636363" HeightRequest="1" Margin="0,5,0,5" HorizontalOptions="FillAndExpand" />
+				<StackLayout Orientation="Horizontal">
+					<Label HorizontalOptions="FillAndExpand" Text="Fecha de cierre: " FontSize="16" TextColor="#636363" />
+					<Label x:Name="_fechafin" Text="fechafin" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" FontSize="16" TextColor="#636363" VerticalOptions="Center" VerticalTextAlignment="Center" />
+				</StackLayout>
+				<BoxView BackgroundColor="#636363" HeightRequest="1" Margin="0,5,0,5" HorizontalOptions="FillAndExpand" />
+				<Label x:Name="_document" Text="Documentos" FontSize="16" TextColor="#636363" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" />
+				<flv:FlowListView x:Name="_flowListView" FlowColumnCount="3" SeparatorVisibility="None" HasUnevenRows="false" HeightRequest="120" RowHeight="120">
+					<flv:FlowListView.FlowColumnTemplate>
+						<DataTemplate>
+							<StackLayout HorizontalOptions="FillAndExpand" HeightRequest="120">
+								<Image Source="{Binding Icono}" HeightRequest="90" />
+								<Label Text="{Binding titulo}" HorizontalTextAlignment="Center" FontSize="12" TextColor="Black" HeightRequest="30" />
+							</StackLayout>
+						</DataTemplate>
+					</flv:FlowListView.FlowColumnTemplate>
+				</flv:FlowListView>
+				<Button HorizontalOptions="FillAndExpand" x:Name="_moreinformation" VerticalOptions="End" Text="QUIERO MÁS INFORMACIÓN" Clicked="information" TextColor="White" BackgroundColor="#003464" />
+			</StackLayout>
+		</ScrollView>
+	</local:BasePage.Content>
+</local:BasePage>

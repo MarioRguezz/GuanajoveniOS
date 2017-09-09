@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Guanajoven.videoPage">
+	<ContentPage.Content>
+		<StackLayout Orientation="Vertical" BackgroundColor="#003464">
+			<Image Source="ic_arrow_back_white_36dp.png" HeightRequest="40" Margin="0,15,0,0" HorizontalOptions="StartAndExpand" WidthRequest="25">
+				<Image.GestureRecognizers>
+					<TapGestureRecognizer Tapped="CloseClicked" />
+				</Image.GestureRecognizers>
+			</Image>
+			<WebView VerticalOptions="FillAndExpand" Source="https://www.youtube.com/watch?v=tlY5rUqSKyo" HorizontalOptions="FillAndExpand">
+			</WebView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

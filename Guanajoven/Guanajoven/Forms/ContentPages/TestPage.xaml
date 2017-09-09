@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Guanajoven.TestPage"
+	xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations">
+	<ContentPage.Content>
+		<ffimageloading:CachedImage Source="background1.jpg.png" x:Name="_img" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" DownsampleToViewSize="true"/>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BasePage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:Guanajoven" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Guanajoven.ChatPage" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations">
+	<local:BasePage.Content>
+		<Grid  Margin="0,20,0,0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+			<Grid BackgroundColor="#003464" Padding="0,5,0,5">
+				<Image Source="ic_menu_white_24dp.png" Margin="7,10,0,0" HeightRequest="30" WidthRequest="30" VerticalOptions="Start" HorizontalOptions="Start">
+					<Image.GestureRecognizers>
+						<TapGestureRecognizer Tapped="CloseClicked" />
+					</Image.GestureRecognizers>
+				</Image>
+				<Label   x:Name="_title" Text="Chat" HorizontalTextAlignment="Center" VerticalOptions="End" HorizontalOptions="CenterAndExpand" TextColor="White" FontAttributes="Bold" FontSize="20" />
+			</Grid>
+			<local:NoSelectedListView Grid.Row="1"  x:Name="_listView" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" HasUnevenRows="true" BackgroundColor="White" SeparatorVisibility="None" IsPullToRefreshEnabled="true">
+				<ListView.Footer>
+					<BoxView HeightRequest="0" BackgroundColor="Transparent" />
+				</ListView.Footer>
+			</local:NoSelectedListView>
+			<StackLayout Grid.Row="2" x:Name="_stackbottom" VerticalOptions="End" Orientation="Horizontal" Spacing="8" Margin="10">
+				<Entry x:Name="_entryMensaje" HorizontalOptions="FillAndExpand" />
+				<Button Text="Enviar" HeightRequest="40" Clicked="EnviarMensaje" />
+			</StackLayout>
+		</Grid>
+		<!--<RelativeLayout>
+			<Grid BackgroundColor="#003464" Padding="0,5,0,5" 
+				RelativeLayout.YConstraint=
+                 "{ConstraintExpression Type=Constant, 
+                                        Constant=25}"
+				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1,Constant=0}" 
+				HeightRequest="50"
+				VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+				<Image Source="ic_menu_white_24dp.png" Margin="7,10,0,0" HeightRequest="30" WidthRequest="30" VerticalOptions="Start" HorizontalOptions="Start">
+					<Image.GestureRecognizers>
+						<TapGestureRecognizer Tapped="CloseClicked" />
+					</Image.GestureRecognizers>
+				</Image>
+				<Label x:Name="_title" Text="Chat" HorizontalTextAlignment="Center" VerticalOptions="End" HorizontalOptions="CenterAndExpand" TextColor="White" FontAttributes="Bold" FontSize="20" />
+			</Grid>
+			<local:NoSelectedListView x:Name="_listView" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" HasUnevenRows="true" BackgroundColor="White" SeparatorVisibility="None" IsPullToRefreshEnabled="true" 
+				RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1,Constant=0}">
+				<ListView.Footer>
+					<BoxView HeightRequest="0" BackgroundColor="Transparent" />
+				</ListView.Footer>
+			</local:NoSelectedListView>
+			<StackLayout x:Name="_stackbottom" Orientation="Horizontal" Spacing="8" Margin="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+
+          RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=_listView, Property=Height,Factor=.91,Constant=0}"
+          RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1,Constant=0}"
+          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=_listView, Property=Height,Factor=.09,Constant=0}">
+				<Entry x:Name="_entryMensaje" HorizontalOptions="FillAndExpand" />
+				<Button Text="Enviar" HeightRequest="40" Clicked="EnviarMensaje" />
+			</StackLayout>
+		</RelativeLayout>-->
+	</local:BasePage.Content>
+</local:BasePage>

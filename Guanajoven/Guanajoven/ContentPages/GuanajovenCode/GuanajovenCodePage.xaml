@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<local:BasePage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Guanajoven.GuanajovenCodePage" xmlns:local="clr-namespace:Guanajoven;assembly=Guanajoven" xmlns:i18n="clr-namespace:Guanajoven;assembly=Guanajoven" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations">
-	<local:BasePage.Content>
-		<StackLayout>
-			<Label Margin="0,20,0,0" HorizontalTextAlignment="Center" HorizontalOptions="Center" Text="CODE" TextColor="#002d6d" />
-			<Image x:Name="_qrImage" BackgroundColor="#FAFAFA" />
-		</StackLayout>
-	</local:BasePage.Content>
-</local:BasePage>

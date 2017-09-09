@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BasePage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Guanajoven.WelcomePage" xmlns:local="clr-namespace:Guanajoven;assembly=Guanajoven" xmlns:i18n="clr-namespace:Guanajoven;assembly=Guanajoven" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations">
+	<local:BasePage.Content>
+		<ScrollView>
+			<StackLayout Padding="25,10,25,10">
+				<Label Margin="0,20,0,0" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontSize="15" Text="HAZ DE GUANAJUATO TU PROYECTO DE VIDA" TextColor="#002d6d" />
+				<ffimageloading:CachedImage Source="logo.png" WidthRequest="130" Margin="30" HorizontalOptions="Center" VerticalOptions="Center" DownsampleToViewSize="true" LoadingDelay="200" FadeAnimationEnabled="true" />
+				<StackLayout Spacing="6" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+					<StackLayout Spacing="5" Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0,0,0,20">
+						<Label HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="En Guanajoven somos la instancia de Gobierno del Estado rectora en el tema de juventud, generadora de programas y políticas públicas, orientada a elevar la calidad de vida de los jóvenes guanajuatenses." TextColor="#636363" />
+						<Button Text="COMENZAR" TextColor="#FFF" BackgroundColor="#003464" Clicked="Start" BorderColor="#003464" BorderWidth="1" />
+						<Label HorizontalOptions="Center" Text="Copyright ©" TextColor="#636363" />
+						<Label HorizontalOptions="Center" Text="Guanajuato 2017." TextColor="#636363" />
+					</StackLayout>
+				</StackLayout>
+			</StackLayout>
+		</ScrollView>
+	</local:BasePage.Content>
+</local:BasePage>

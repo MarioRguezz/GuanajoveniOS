@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Guanajoven.SetInfoIdioma">
+	<ContentPage.Content>
+		<Grid Padding="0">
+			<Image Source="modificarbackground2.jpg"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Aspect="AspectFill" />
+			<BoxView x:Name="Background"  >
+			</BoxView>
+			<Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="1*" />
+				</Grid.RowDefinitions>
+				<Label Grid.Row="0" x:Name="_nombre" Grid.ColumnSpan="3" Text="IDIOMAS" HorizontalTextAlignment="Center" FontSize="20" Margin="0,40,0,0" FontAttributes="Bold" TextColor="#636363" />
+				<Label Grid.Column="0" Margin="0,40,0,0" Grid.Row="1" Text="Lectura" TextColor="#003464" HorizontalTextAlignment="Center" FontSize="18" />
+				<Entry Grid.Column="1" Margin="0,40,0,0" Grid.Row="1" x:Name="_lectura" TextColor="#003464" Keyboard="Numeric" />
+				<Label Grid.Column="2" Margin="0,40,0,0" Grid.Row="1" Text="%" TextColor="#003464" />
+				<Label Grid.Column="0" Margin="0,40,0,0" Grid.Row="2" Text="Escritura" HorizontalTextAlignment="Center" TextColor="#003464" FontSize="18" />
+				<Entry Grid.Column="1" Margin="0,40,0,0" Grid.Row="2" x:Name="_escritura" Keyboard="Numeric" />
+				<Label Grid.Column="2" Margin="0,40,0,0" Grid.Row="2" Text="%" TextColor="#003464" />
+				<Label Grid.Column="0" Margin="0,40,0,0" Grid.Row="3" Text="Conversación" HorizontalTextAlignment="Center" TextColor="#003464" FontSize="18" />
+				<Entry Grid.Column="1" Margin="0,40,0,0" Grid.Row="3" x:Name="_conversacion" Keyboard="Numeric" />
+				<Label Grid.Column="2" Margin="0,40,0,0" Grid.Row="3" Text="%" TextColor="#003464" />
+				<Button Grid.Row="4" x:Name="_continuar" Grid.ColumnSpan="3" Text="CONTINUAR" TextColor="White" HorizontalOptions="FillAndExpand" Margin="40,0,40,10" Clicked="ContinuarClicked" BackgroundColor="#003464" VerticalOptions="End" />
+			</Grid>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>

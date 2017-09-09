@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BasePage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Guanajoven.AboutPage" xmlns:local="clr-namespace:Guanajoven;assembly=Guanajoven" xmlns:i18n="clr-namespace:Guanajoven;assembly=Guanajoven" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations">
+	<local:BasePage.Content>
+		<ScrollView>
+			<StackLayout Orientation="Vertical">
+				<StackLayout x:Name="_topContainer" HorizontalOptions="FillAndExpand" Spacing="5" VerticalOptions="Start" Padding="8" IsVisible="true" Orientation="Horizontal" BackgroundColor="#003464" HeightRequest="46">
+					<Image Source="ic_menu_white_24dp.png" HorizontalOptions="StartAndExpand" Margin="0,10,0,0" HeightRequest="30" WidthRequest="30" VerticalOptions="Center">
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Tapped="CloseClicked" />
+						</Image.GestureRecognizers>
+					</Image>
+				</StackLayout>
+				<Frame Margin="10" Padding="0" VerticalOptions="FillAndExpand" HasShadow="false">
+					<Frame.Content>
+						<StackLayout Orientation="Vertical">
+							<Image Source="logo.png" Margin="0,1,-10,10" Aspect="AspectFit" HeightRequest="70" WidthRequest="70" HorizontalOptions="FillAndExpand" />
+							<Label Text="¿Qué hacemos?" Margin="0,1,0,0" FontSize="20" FontAttributes="Bold" VerticalOptions="Center" TextColor="#B23F62" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+							<Label x:Name="_queHacemos" Text="Texto" Margin="0,-5,0,0" FontSize="15" FontAttributes="None" VerticalOptions="Center" TextColor="#636363" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+							<Label Text="Logros y estadísticas" Margin="0,20,0,0" FontSize="20" FontAttributes="Bold" VerticalOptions="Center" TextColor="#B23F62" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+							<Label x:Name="_logros" Text="Logros" Margin="0,-5,0,0" FontSize="15" FontAttributes="None" VerticalOptions="Center" TextColor="#636363" HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+							<Label Text="Enlaces" Margin="0,20,0,0" FontSize="20" FontAttributes="Bold" VerticalOptions="Center" TextColor="#B23F62" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+							<Button x:Name="_lineas" Margin="0,-15,0,0" Text="Líneas de acción" TextColor="#003464" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" Clicked="lineas"   />
+							<Button x:Name="_encuesta" Margin="0,-15,0,0" Text="Encuesta de juventud" TextColor="#003464" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" Clicked="encuestas"  />
+							<Button x:Name="_diagnostico" Margin="0,-15,0,0" Text="Diagnóstico juvenil" TextColor="#003464" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" Clicked="diagnosticos"  />
+							<Button x:Name="_directorio" Margin="0,-15,0,0" Text="Directorio" TextColor="#003464" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" Clicked="directorios"   />
+						</StackLayout>
+					</Frame.Content>
+				</Frame>
+			</StackLayout>
+		</ScrollView>
+	</local:BasePage.Content>
+</local:BasePage>

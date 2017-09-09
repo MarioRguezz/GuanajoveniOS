@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local:BasePage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:local="clr-namespace:Guanajoven" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Guanajoven.PromotionPage" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations">
+	<local:BasePage.Content>
+		<Grid RowSpacing="0" Margin="0,20,0,0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="1*" />
+			</Grid.RowDefinitions>
+			<Image Grid.Row="0" x:Name="_image" Source="background3.jpg" Margin="15" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Aspect="AspectFill" />
+			<Label Grid.Row="0" x:Name="_promotion" Text="Promociones" HorizontalTextAlignment="Center" VerticalOptions="End" HorizontalOptions="CenterAndExpand" TextColor="#003464" FontAttributes="Bold" FontSize="20" />
+			<ListView Grid.Row="1" x:Name="ListView" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" RowHeight="150" BackgroundColor="White" SeparatorColor="Transparent">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout Orientation="Horizontal" HeightRequest="120" Spacing="0" Margin="0" HorizontalOptions="FillAndExpand" Padding="0">
+								<StackLayout Padding="5" Margin="5,0,0,0" Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+									<Image Source="ic_promocion_64px.png" Margin="0,20,0,0" HeightRequest="50" HorizontalOptions="Start" VerticalOptions="Start" />
+									<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+										<Label Text="{Binding titulo}" Margin="0,5,0,0" FontSize="20" FontAttributes="Bold" VerticalOptions="Center" TextColor="#B23F62" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+										<Label Text="{Binding descripcion}" Margin="0,-5,0,0" FontSize="15" FontAttributes="None" VerticalOptions="Center" TextColor="#636363" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+										<Label Text="{Binding codigo_promocion}" Margin="0,-5,0,0" FontSize="15" FontAttributes="None" VerticalOptions="Center" TextColor="#003464" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+										<Label Text="Aplicar promoción" Margin="0,-5,0,0" FontSize="12" FontAttributes="None" VerticalOptions="Center" TextColor="#003464" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
+									</StackLayout>
+								</StackLayout>
+								<StackLayout.GestureRecognizers>
+									<TapGestureRecognizer Tapped="TapItem" />
+								</StackLayout.GestureRecognizers>
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</Grid>
+	</local:BasePage.Content>
+</local:BasePage>
