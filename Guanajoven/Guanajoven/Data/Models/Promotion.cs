@@ -49,6 +49,14 @@ namespace Guanajoven
 		public List<object> errors { get; set; }
 		public List<Empresa> data { get; set; }
 	}
+
+
+
+public class PromotionService
+{
+	public string id_promocion { get; set; }
+	public string token { get; set; }
+	}
 }
 
 

@@ -18,6 +18,7 @@ namespace Guanajoven
 	{
 
 		string url = null;
+		string id_promocion = null;
 		public DetailPromotionPage(Promotion promotion, string imagen)
 		{
 			InitializeComponent();
@@ -28,6 +29,7 @@ namespace Guanajoven
 			_bases.Text = promotion.bases;
 			_codigo_promocion.Text = promotion.codigo_promocion;
 			url = promotion.url_promocion;
+			id_promocion = promotion.id_promocion + "";
 			_fechainicio.Text = DateTime.Parse(promotion.fecha_inicio).ToString("dd/MM/yyyy");
 			_fechafin.Text = DateTime.Parse(promotion.fecha_fin).ToString("dd/MM/yyyy");
 			var user = PropertiesManager.GetUserInfo();
@@ -53,33 +55,57 @@ namespace Guanajoven
 
 		async void _promotionApplied(object sender, System.EventArgs e)
 		{
-
-			string token = "";
-			var user = PropertiesManager.GetUserInfo();
-			if (user != null)
+			var answer = await DisplayAlert("Guanajoven", "Al aplicar esta promoción quedará registrado en la base de datos que has sido beneficiado por la empresa, ¿Estas seguro de Aplicar esta promoción?", "Sí", "No");
+			if (!answer)
 			{
-				CheckConnection();
-				ShowProgress("Validando");
-				var response = await ClientGuanajoven.getToken(user.data.api_token);
-				if (ValidateResponse(response))
+			}
+			else
+			{
+				var user = PropertiesManager.GetUserInfo();
+				if (user != null)
 				{
-					var codigo = JsonConvert.DeserializeObject<CodigoPOJO>(response);
-					token = codigo.data;
-					ShowProgress(IProgressType.LogedIn);
-					await Task.Delay(600);
+					CheckConnection();
+					ShowProgress("Validando");
+					var response = await ClientGuanajoven.setPromotion(id_promocion, user.data.codigo_guanajoven.token);
+					if (ValidateResponse(response, checkError(response)))
+					{
+						ShowProgress(IProgressType.LogedIn);
+						_qrImage.IsVisible = true;
+						await Task.Delay(600);
+						await DisplayAlert("Guanajoven", "Promoción aplicada", "Aceptar");
+					}
+					HideProgress();
 				}
-				HideProgress();
-			}
-			if (!string.IsNullOrEmpty(token))
-			{
-				var stream = DependencyService.Get<IBarcodeService>().ConvertImageStream(token);
-				_qrImage.Source = ImageSource.FromStream(() => { return stream; });
 			}
 
-			var stream = DependencyService.Get<IBarcodeService>().ConvertImageStream("123");
-			_qrImage.IsVisible = true;
-			_qrImage.Source = ImageSource.FromStream(() => { return stream; });
-			await DisplayAlert("Guanajoven", "Promoción aplicada", "Aceptar");
+		}
+
+
+
+		string checkError(string response)
+		{
+			return ClientGuanajoven.IsErrorType(response);
+		}
+
+
+		bool ValidateResponse(string response, string text)
+		{
+			if (ClientGuanajoven.IsError(response))
+			{
+				if (text != "")
+				{
+					DisplayAlert("Error", text, "Aceptar");
+				}
+				/*else
+				{
+					DisplayAlert("Error", "Código Aplicado", "Aceptar");
+				}*/
+				return false;
+			}
+			else
+			{
+				return true;
+			}
 		}
 
 

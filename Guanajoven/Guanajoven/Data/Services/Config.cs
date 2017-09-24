@@ -48,8 +48,11 @@ namespace Guanajoven
 	{
 		//public static string URL = "http://10.0.7.40/GuanajovenWeb/public/api/";
 		//public static string URL = "http://192.168.0.97/GuanajovenWeb/public/api/";
-		public static string URL = "http://localhost/GuanajovenWeb/public/api/";
+		//public static string URL = "http://localhost/GuanajovenWeb/public/api/";
 		//public static string URL = "http://200.23.39.11/GuanajovenWeb/public/api/";
+		public static string URL = "http://guanajovenapp.guanajuato.gob.mx/api/";
+
+
 
 
 		public static string GetURLForMethod(WEB_METHODS method)

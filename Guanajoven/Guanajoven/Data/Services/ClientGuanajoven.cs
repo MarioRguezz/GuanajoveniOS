@@ -81,12 +81,12 @@ namespace Guanajoven
 			return jsonResponse;
 		}
 
-		public static async Task<string> setPromotion(string titulo, string mensaje)
+		public static async Task<string> setPromotion(string id_promocion, string token)
 		{
-			var jsonResponse = await PostObject<Notificacion>(new Notificacion()
+			var jsonResponse = await PostObject<PromotionService>(new PromotionService()
 			{
-				titulo = titulo,
-				mensaje = mensaje
+				id_promocion = id_promocion,
+				token = token
 			}, WEB_METHODS.RegistrarPromocion);
 
 			if (jsonResponse == null)
@@ -94,16 +94,8 @@ namespace Guanajoven
 				return null;
 			}
 
-
-
 			return jsonResponse;
 		}
-
-
-
-
-
-
 
 
 

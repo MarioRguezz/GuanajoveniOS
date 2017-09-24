@@ -1,30 +1,10 @@
 ﻿<Properties StartupConfiguration="{1315BADC-5285-4B5D-9045-6A9B41469E54}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Guanajoven/Data/Services/ClientGuanajoven.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Info.plist">
     <Files>
-      <File FileName="Guanajoven/Forms/ContentPages/Promotion/DetailPromotionPage.xaml.cs" Line="61" Column="22" />
-      <File FileName="Guanajoven/Forms/ContentPages/Promotion/DetailPromotionPage.xaml" Line="1" Column="1" />
-      <File FileName="iOS/Main.cs" Line="17" Column="1" />
-      <File FileName="Guanajoven/Forms/ContentPages/GuanajovenCode/GuanajovenCodePage.xaml.cs" Line="120" Column="3" />
-      <File FileName="Guanajoven/Data/Services/Config.cs" Line="112" Column="40" />
-      <File FileName="Guanajoven/Data/Services/ClientGuanajoven.cs" Line="86" Column="72" />
+      <File FileName="iOS/Info.plist" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Guanajoven" expanded="True">
-            <Node name="Guanajoven" expanded="True">
-              <Node name="Data" expanded="True">
-                <Node name="Services" expanded="True">
-                  <Node name="ClientGuanajoven.cs" selected="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/marioalbertonegreterodriguez/Projects/Guanajoven/Guanajoven/ContentPages/Login/SignUpPage.xaml.cs" relfile="Guanajoven/ContentPages/Login/SignUpPage.xaml.cs" line="61" column="1" />
@@ -36,7 +16,7 @@
     <Watch file="Guanajoven/ContentPages/Data/Services/ClientGuanajoven.cs" line="478" offsetX="463" offsetY="6080" expression="response" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Guanajoven.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D516CC0F-1EEB-4194-BF63-504EF0E6C504">
-    <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="EVX88W2HK4" TeamId="C62884LUGF" />
+  <MonoDevelop.Ide.ItemProperties.Guanajoven.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="Y8YK9HJZHZ" TeamId="E23HCJ67BM" />
   </MonoDevelop.Ide.ItemProperties.Guanajoven.iOS>
 </Properties>
