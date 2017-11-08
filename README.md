@@ -13,7 +13,7 @@ This project uses a web server with:
 Anyway you can use whatever you want in the web application even if you change something there won't be problem
 with this mobile version.
 
-### Prerequisitos
+### Prerequisite
 
 * [Xamarin forms](https://www.xamarin.com/download)
 
