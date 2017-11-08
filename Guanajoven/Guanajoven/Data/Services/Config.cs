@@ -46,11 +46,8 @@ namespace Guanajoven
 
 	public class Config
 	{
-		//public static string URL = "http://172.20.10.3/GuanajovenWeb/public/api/";
-		//public static string URL = "http://192.168.0.97/GuanajovenWeb/public/api/";
-		//public static string URL = "http://localhost/GuanajovenWeb/public/api/";
-		//public static string URL = "http://200.23.39.11/GuanajovenWeb/public/api/";
-		public static string URL = "http://guanajovenapp.guanajuato.gob.mx/api/";
+		public static string URL = "http://localhost/GuanajovenWeb/public/api/";
+
 
 
 
@@ -61,9 +58,9 @@ namespace Guanajoven
 			switch (method)
 			{
 				case WEB_METHODS.Curp:
-					return "usuarios/curp";
+					return "usuarios/curps";
 				case WEB_METHODS.Register:
-					return "usuarios/registrar";
+					return "usuarios/registrard";
 				case WEB_METHODS.Login:
 					return "usuarios/login";
 				case WEB_METHODS.ForgotPass:
@@ -129,7 +126,3 @@ namespace Guanajoven
 
 	}
 }
-
-
-
-
