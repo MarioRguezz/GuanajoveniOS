@@ -20,7 +20,7 @@ namespace Guanajoven
 				if (mensaje != null)
 				{
 					_mensaje.Text = mensaje.mensaje;
-					_hora.Text = mensaje.created_at;
+					_hora.Text = DateTime.Parse(mensaje.created_at).ToString("dd/MM/yyyy hh:mm:ss tt");
 
 
 					if (mensaje.envia_usuario == 0)

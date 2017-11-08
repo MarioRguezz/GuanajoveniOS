@@ -31,7 +31,8 @@ namespace Guanajoven
 			//test();
 			getCalls();
 
-			if (App.CurrentApp.publicidad == true) {
+			if (App.CurrentApp.publicidad == true)
+			{
 				RootPage.IsPresented = true;
 			}
 			App.CurrentApp.publicidad = false;
@@ -48,9 +49,28 @@ namespace Guanajoven
 			{
 				dateToSend = PropertiesManager.GetDateCall();
 			}
+			if (PropertiesManager.IsFirstDateCallTrue())
+			{
+				PropertiesManager.SaveFirstCallDate(1);
+			}
+			else
+			{
+				PropertiesManager.SaveFirstCallDate(PropertiesManager.GetFirstDataCall() + 1);
+			}
+
 			CheckConnection();
 			ShowProgress("Validando");
-			var times = dateToSend.ToString("yyyy-MM-dd HH:MM:ss");
+			String times = "";
+			if (PropertiesManager.GetFirstDataCall() > 1)
+			{
+				times = dateToSend.ToString("yyyy-MM-dd HH:MM:ss");
+
+			}
+			else
+			{
+				times = "0000-00-00 00:00:00";
+			}
+			//var times = dateToSend.ToString("yyyy-MM-dd HH:MM:ss");
 			_calls = await ClientGuanajoven.getCalls(times);
 			var convocatorias = App.CurrentApp.RealmInstance.All<Convocatoria>().ToList();
 			if (_calls != null && _calls.Count > 0)
@@ -166,8 +186,8 @@ namespace Guanajoven
 			var image = sender as Image;
 			image.Opacity = 0.6;
 			image.FadeTo(1);
-			await Navigation.PushAsync(new AdvertisingPage());
-			//RootPage.IsPresented = true;
+			//await Navigation.PushAsync(new AdvertisingPage());
+			RootPage.IsPresented = true;
 			//await Navigation.PopAsync();
 		}
 

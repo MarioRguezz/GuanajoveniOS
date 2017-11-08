@@ -158,8 +158,8 @@ namespace Guanajoven
 			var image = sender as Image;
 			image.Opacity = 0.6;
 			image.FadeTo(1);
-			//RootPage.IsPresented = true;
-			await Navigation.PushAsync(new AdvertisingPage());
+			RootPage.IsPresented = true;
+			//await Navigation.PushAsync(new AdvertisingPage());
 		}
 	}
 }

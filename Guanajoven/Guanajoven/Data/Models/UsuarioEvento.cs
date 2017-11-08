@@ -9,5 +9,6 @@ namespace Guanajoven
 	{
 		public string id_evento { get; set; }
 		public string id_usuario { get; set; }
+		public string api_token { get; set; } 
 	}
 }

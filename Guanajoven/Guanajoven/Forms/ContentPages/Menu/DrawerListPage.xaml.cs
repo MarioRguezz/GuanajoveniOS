@@ -115,8 +115,8 @@ namespace Guanajoven
 		var usertmp = PropertiesManager.GetUserInfo();
 		if (usertmp != null)
 		{
-					_score.Text = usertmp.data.puntaje+ " Puntos";
-					_podium.Text = "Posición " + usertmp.data.posicion;
+			_score.Text = usertmp.data.puntaje + " Puntos";
+			_podium.Text = "Posición " + usertmp.data.posicion;
 		}
 	});
 		}
@@ -133,9 +133,28 @@ namespace Guanajoven
 			{
 				dateToSend = PropertiesManager.GetDataAdvertising();
 			}
+			if (PropertiesManager.IsDateFirstAdvertisingTrue())
+			{
+				PropertiesManager.SaveFirstAdvertisingDate(1);
+			}
+			else
+			{
+				PropertiesManager.SaveFirstAdvertisingDate(PropertiesManager.GetFirstDataAdvertising() + 1);
+			}
+
 			CheckConnection();
 			//ShowProgress("Validando");
-			var times = dateToSend.ToString("yyyy-MM-dd HH:MM:ss");
+			String times = "";
+			if (PropertiesManager.GetFirstDataAdvertising() > 1)
+			{
+				 times = dateToSend.ToString("yyyy-MM-dd HH:MM:ss");
+
+			}
+			else
+			{
+				 times = "0000-00-00 00:00:00";
+			}
+			//var times = dateToSend.ToString("yyyy-MM-dd HH:MM:ss");
 			_advertising = await ClientGuanajoven.getAdvertising(times);
 			var publicidad = App.CurrentApp.RealmInstance.All<Publicidad>().ToList();
 			if (_advertising != null && _advertising.Count > 0)

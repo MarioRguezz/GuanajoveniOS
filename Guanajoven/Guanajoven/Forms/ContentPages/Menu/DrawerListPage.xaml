@@ -14,18 +14,18 @@
 					<!--<BoxView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="White" />-->
 					<StackLayout Padding="10,20,10,20">
 						<StackLayout Orientation="Horizontal">
-							<ffimageloading:CachedImage x:Name="_imageView" Source="placeholder.png" HeightRequest="100" WidthRequest="100" HorizontalOptions="Start" VerticalOptions="Center" DownsampleToViewSize="true">
+							<ffimageloading:CachedImage x:Name="_imageView" Source="placeholder.png" HeightRequest="80" WidthRequest="80" HorizontalOptions="Start" VerticalOptions="Center" DownsampleToViewSize="true">
 								<ffimageloading:CachedImage.Transformations>
 									<fftransformations:CircleTransformation />
 								</ffimageloading:CachedImage.Transformations>
 								<ffimageloading:CachedImage.GestureRecognizers>
 								</ffimageloading:CachedImage.GestureRecognizers>
 							</ffimageloading:CachedImage>
-							<StackLayout Orientation="Vertical" Margin="10,10,0,0">
-							<Label x:Name="_score" Text="2000 Puntos" HorizontalOptions="StartAndExpand" TextColor="White"  FontSize="11" FontAttributes="None" />
-							<Label x:Name="_podium" Text="5to Lugar" HorizontalOptions="StartAndExpand" TextColor="White" FontSize="11" FontAttributes="None" />
+							<StackLayout Orientation="Vertical" Margin="10,10,0,0" VerticalOptions="End">
+								<Label x:Name="_score" Text="2000 Puntos" HorizontalOptions="StartAndExpand" TextColor="White" FontSize="12" FontAttributes="None" />
+								<Label x:Name="_podium" Text="5to Lugar" HorizontalOptions="StartAndExpand" TextColor="White" FontSize="12" FontAttributes="None" />
 							</StackLayout>
-							</StackLayout>
+						</StackLayout>
 						<Label x:Name="_email" Text="email" HorizontalOptions="StartAndExpand" TextColor="White" FontAttributes="None" />
 						<Label x:Name="_nombre" Text="Nombre" HorizontalOptions="StartAndExpand" TextColor="White" FontAttributes="None" />
 					</StackLayout>
@@ -34,8 +34,8 @@
 					<ListView.ItemTemplate>
 						<DataTemplate>
 							<ViewCell>
-								<StackLayout Orientation="Horizontal" HeightRequest="60" Spacing="0" Margin="0" HorizontalOptions="FillAndExpand" Padding="0">
-									<StackLayout Padding="5" Margin="5,0,0,0" Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+								<StackLayout Orientation="Horizontal" HeightRequest="40" Spacing="0" Margin="0" HorizontalOptions="FillAndExpand" Padding="0">
+									<StackLayout Padding="2" Margin="5,0,0,0" Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
 										<Image Source="{Binding Image}" WidthRequest="20" HeightRequest="20" HorizontalOptions="Start" VerticalOptions="Center" />
 										<Label Text="{Binding Label}" FontSize="15" FontAttributes="None" VerticalOptions="Center" TextColor="Black" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
 									</StackLayout>

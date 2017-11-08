@@ -33,7 +33,7 @@ namespace Guanajoven
 			_genre.Text = user.data.datos_usuario.genero.nombre;
 			_municipio.Text = user.data.datos_usuario.municipio.nombre;
 			DateTime myDate = DateTime.Parse(user.data.datos_usuario.fecha_nacimiento);
-			_fechanacimiento.Text = myDate.ToString("dd-MM-yyyy");
+			_fechanacimiento.Text = myDate.ToString("dd/MM/yyyy");
 			_estadonacimiento.Text = user.data.datos_usuario.estado_nacimiento.nombre;
 			Background.BackgroundColor = Color.FromHex("#b7C7E1F5");
 			NavigationPage.SetHasNavigationBar(this, false);

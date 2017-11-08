@@ -177,7 +177,7 @@ namespace Guanajoven
 					PropertiesManager.SaveUserInfo(user);
 					FirebaseObject firebase= new FirebaseObject();
 					firebase.os = "ios";
-					firebase.id_usuario = user.data.id +"";
+ 					firebase.id_usuario = user.data.id +"";
 					firebase.device_token = App.CurrentApp.DeviceToken; //id de firebase_rg
 					var sendtoken = await ClientGuanajoven.getIdFirebase(firebase);
 					ShowProgress(IProgressType.LogedIn);

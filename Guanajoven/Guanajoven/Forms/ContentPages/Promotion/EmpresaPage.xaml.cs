@@ -135,9 +135,27 @@ namespace Guanajoven
 			{
 				dateToSend = PropertiesManager.GetDataPromotion();
 			}
+			if (PropertiesManager.IsFirstDatePromotionTrue())
+			{
+				PropertiesManager.SaveFirstPromotionDate(1);
+			}
+			else
+			{
+				PropertiesManager.SaveFirstPromotionDate(PropertiesManager.GetFirstDataPromotion() + 1);
+			}
 			CheckConnection();
 			ShowProgress("Validando");
-			var times = dateToSend.ToString("yyyy-MM-dd HH:MM:ss");
+			String times = "";
+			if (PropertiesManager.GetFirstDataPromotion() > 1)
+			{
+				 times = dateToSend.ToString("yyyy-MM-dd HH:MM:ss");
+
+			}
+			else
+			{
+				 times = "0000-00-00 00:00:00";
+			}
+			//var times = dateToSend.ToString("yyyy-MM-dd HH:MM:ss");
 			_empresas = await ClientGuanajoven.getPromotions(times);
 			var empresas = App.CurrentApp.RealmInstance.All<Empresa>().ToList();
 			if (_empresas != null && _empresas.Count > 0)

@@ -163,13 +163,13 @@ namespace Guanajoven
 
 
 
-
-		public static async Task<string> InteresaEvento(string id_usuario, string id_evento)
+		//id_usuario
+		public static async Task<string> InteresaEvento(string token, string id_evento)
 		{
 			var jsonResponse = await PostObject<UsuarioEvento>(new UsuarioEvento()
 			{
 				id_evento = id_evento,
-				id_usuario = id_usuario
+				api_token = token
 			}, WEB_METHODS.InteresaEvento);
 			if (jsonResponse == null)
 			{
@@ -529,11 +529,11 @@ Call<Response<Boolean>> verificarCorreo(
         ? id_usuario = 156 & id_convocatoria=30
 		    );*/
 
-		public static async Task<string> sendEmail(string idusuario, string idconvocatoria)
+		public static async Task<string> sendEmail(string token, string idconvocatoria)
 		{
 			var jsonResponse = await PostObject<EmailPOJO>(new EmailPOJO()
 			{
-				id_usuario = idusuario,
+				api_token = token,
 				id_convocatoria = idconvocatoria
 			}, WEB_METHODS.EmailCall);
 			if (jsonResponse == null)

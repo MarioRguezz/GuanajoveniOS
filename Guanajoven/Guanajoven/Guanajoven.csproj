@@ -54,9 +54,6 @@
     <EmbeddedResource Include="Forms\ContentPages\Home\AdvertisingPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ContentPages\Home\MasterHomePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ContentPages\Home\videoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -115,6 +112,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ViewCells\ChatViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ContentPages\Home\MasterHomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -202,10 +202,6 @@
     <Compile Include="Forms\ContentPages\Home\AdvertisingPage.xaml.cs">
       <DependentUpon>..\..\..\ContentPages\Home\AdvertisingPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ContentPages\Home\HomeDrawerPage.cs" />
-    <Compile Include="Forms\ContentPages\Home\MasterHomePage.xaml.cs">
-      <DependentUpon>..\..\..\ContentPages\Home\MasterHomePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Forms\ContentPages\Home\videoPage.xaml.cs">
       <DependentUpon>..\..\..\ContentPages\Home\videoPage.xaml</DependentUpon>
     </Compile>
@@ -274,6 +270,10 @@
     </Compile>
     <Compile Include="Forms\CustomViews\NoSelectedListView.cs" />
     <Compile Include="Data\Models\GuanajovenResponse.cs" />
+    <Compile Include="Forms\ContentPages\Home\MasterHomePage.xaml.cs">
+      <DependentUpon>..\..\..\ContentPages\Home\MasterHomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ContentPages\Menu\HomeDrawerPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -363,12 +363,6 @@
     <Reference Include="Plugin.Geolocator">
       <HintPath>..\packages\Xam.Plugin.Geolocator.4.0.1\lib\netstandard1.0\Plugin.Geolocator.dll</HintPath>
     </Reference>
-    <Reference Include="Plugin.FirebasePushNotification.Abstractions">
-      <HintPath>..\packages\Plugin.FirebasePushNotification.1.0.4\lib\portable-net45+wp80+win8+wpa81\Plugin.FirebasePushNotification.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Plugin.FirebasePushNotification">
-      <HintPath>..\packages\Plugin.FirebasePushNotification.1.0.4\lib\portable-net45+wp80+win8+wpa81\Plugin.FirebasePushNotification.dll</HintPath>
-    </Reference>
     <Reference Include="XMessageControl">
       <HintPath>..\libs\pcl\XMessageControl.dll</HintPath>
     </Reference>
@@ -379,6 +373,12 @@
     <Reference Include="Xamarin.Auth.XamarinForms">
       <HintPath>..\packages\Xamarin.Auth.XamarinForms.1.5.0.3\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+XamarinIOS10\Xamarin.Auth.XamarinForms.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="Plugin.FirebasePushNotification.Abstractions">
+      <HintPath>..\packages\Plugin.FirebasePushNotification.1.0.7\lib\netstandard1.0\Plugin.FirebasePushNotification.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.FirebasePushNotification">
+      <HintPath>..\packages\Plugin.FirebasePushNotification.1.0.7\lib\netstandard1.0\Plugin.FirebasePushNotification.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

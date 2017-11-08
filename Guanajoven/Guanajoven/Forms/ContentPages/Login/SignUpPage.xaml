@@ -5,8 +5,8 @@
 			<Image Source="registrobackground.jpg" Scale="1.1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Aspect="AspectFill" />
 			<BoxView x:Name="Background">
 			</BoxView>
-			<StackLayout Grid.Row="0" Spacing="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="20,30,20,30">
-				<ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+			<StackLayout Grid.Row="0" Spacing="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+				<ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Padding="20,30,20,30">
 					<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical">
 						<Image Source="ic_arrow_back_blue_36dp.png" HeightRequest="40" WidthRequest="25" HorizontalOptions="Start">
 							<Image.GestureRecognizers>

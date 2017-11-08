@@ -2,23 +2,25 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Guanajoven.RootPage">
 	<ContentPage.Content>
 		<Grid Padding="0">
-			<Image Source="rootbackground.jpg"  Scale="1.1"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Aspect="AspectFill" />
-			<BoxView x:Name="Background">   </BoxView>
-			<Grid Margin="30,60,30,10">
+			<Image Source="rootbackground.jpg" Scale="1.1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Aspect="AspectFill" />
+			<BoxView x:Name="Background">
+			</BoxView>
+			<Grid Margin="30,30,30,10">
 				<Grid.RowDefinitions>
-					<RowDefinition Height="25" />
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
 					<RowDefinition Height="1*" />
 					<RowDefinition Height="1*" />
-					<RowDefinition Height="1*" /> 
 				</Grid.RowDefinitions>
-				<Image  Grid.Row="0" Source="infowhite.png" HorizontalOptions="End" HeightRequest="30" Margin="0,-20,0,0" WidthRequest="30" VerticalOptions="Start">
-						<Image.GestureRecognizers>
-							<TapGestureRecognizer Tapped="VideoClicked" />
-						</Image.GestureRecognizers>
-					</Image>
-				<Image Grid.Row="1" Source="logo.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="160" Margin="0,90,0,0" WidthRequest="160" />
-				<Button Grid.Row="2" Text="INICIO DE SESIÓN" TextColor="White" HorizontalOptions="FillAndExpand" Margin="40,0,40,10"  Clicked="Session"  BackgroundColor="Transparent" BorderColor="White" BorderWidth="1" VerticalOptions="End" />
-				<Button Grid.Row="3" Text="REGISTRAR" TextColor="#003464" HorizontalOptions="FillAndExpand" Margin="40,0,40,0"  Clicked="SignUp"  BackgroundColor="White" VerticalOptions="Start" />
+				<StackLayout Grid.Row="0" HorizontalOptions="End" Padding="10">
+					<Image Source="infowhite.png" HeightRequest="30" WidthRequest="30" />
+					<StackLayout.GestureRecognizers>
+						<TapGestureRecognizer Tapped="VideoClicked" />
+					</StackLayout.GestureRecognizers>
+				</StackLayout>
+				<Image Grid.Row="1" Source="logo.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="200" Margin="0,90,0,0" WidthRequest="200" Aspect="AspectFit" />
+				<Button Grid.Row="2" Text="INICIO DE SESIÓN" TextColor="White" HorizontalOptions="FillAndExpand" Margin="40,0,40,10" Clicked="Session" BackgroundColor="Transparent" BorderColor="White" BorderWidth="1" VerticalOptions="End" />
+				<Button Grid.Row="3" Text="REGISTRAR" TextColor="#003464" HorizontalOptions="FillAndExpand" Margin="40,0,40,0" Clicked="SignUp" BackgroundColor="White" VerticalOptions="Start" />
 			</Grid>
 		</Grid>
 	</ContentPage.Content>

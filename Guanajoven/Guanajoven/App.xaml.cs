@@ -93,6 +93,7 @@ namespace Guanajoven
 			 {
 				 System.Diagnostics.Debug.WriteLine($"TOKEN : {p.Token}");
 
+				SaveToken(p.Token, 2);
 			 };
 
 			CrossFirebasePushNotification.Current.OnNotificationReceived += (s, p) =>
@@ -144,7 +145,9 @@ namespace Guanajoven
 					{
 						UIMessage.ShowToast("¡Te enviaron un nuevo mensaje!", ToastMessage.ToastPosition.TOP, ToastMessage.Duration.Long
 											 , null, Color.FromHex("#003464"));
-					}else{
+					}
+					else
+					{
 						if (MensajeRecibido != null)
 						{
 							MensajeRecibido(this, new ChatModel()

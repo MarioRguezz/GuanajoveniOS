@@ -67,7 +67,7 @@
 						<Label Text="Convocatoria" HorizontalTextAlignment="Center" FontAttributes="None" FontSize="11" TextColor="White" HorizontalOptions="FillAndExpand" />
 						<Label Text="" HorizontalTextAlignment="Center" FontAttributes="None" FontSize="11" TextColor="White" HorizontalOptions="FillAndExpand" />
 					</StackLayout>
-					<StackLayout Orientation="Vertical" Margin="-35,0,0,0" HorizontalOptions="FillAndExpand">
+					<StackLayout Orientation="Vertical" Margin="-27,0,0,0" HorizontalOptions="FillAndExpand">
 						<Image Source="socialmenu.png" HorizontalOptions="FillAndExpand" Aspect="AspectFit" HeightRequest="60" WidthRequest="50">
 							<Image.GestureRecognizers>
 								<TapGestureRecognizer Tapped="RedClicked" />

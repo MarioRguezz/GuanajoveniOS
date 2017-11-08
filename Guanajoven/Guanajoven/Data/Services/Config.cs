@@ -46,7 +46,7 @@ namespace Guanajoven
 
 	public class Config
 	{
-		//public static string URL = "http://10.0.7.40/GuanajovenWeb/public/api/";
+		//public static string URL = "http://172.20.10.3/GuanajovenWeb/public/api/";
 		//public static string URL = "http://192.168.0.97/GuanajovenWeb/public/api/";
 		//public static string URL = "http://localhost/GuanajovenWeb/public/api/";
 		//public static string URL = "http://200.23.39.11/GuanajovenWeb/public/api/";
@@ -91,7 +91,8 @@ namespace Guanajoven
 				case WEB_METHODS.ProfileUpdate:
 					return "profile/update";
 				case WEB_METHODS.EmailCall:
-					return "notificaciones/convocatoria";
+					//return "notificaciones/convocatoria";
+				   	return "convocatorias/notificacion";
 				case WEB_METHODS.Promotions:
 					return "promociones?";
 				case WEB_METHODS.EnviarToken:
@@ -107,7 +108,8 @@ namespace Guanajoven
 				case WEB_METHODS.NotificacionEvento:
 					return "eventos/marcar";
 				case WEB_METHODS.InteresaEvento:
-					return "notificaciones/evento";
+					//return "notificaciones/evento";
+					return "eventos/notificacion";
 				case WEB_METHODS.SetURL:
 					return "notificaciones/notificacionurl";
 				case WEB_METHODS.SendEmailID:

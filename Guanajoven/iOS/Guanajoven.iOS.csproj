@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.props" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.props')" />
+  <Import Project="..\packages\Xamarin.Build.Download.0.4.6\build\Xamarin.Build.Download.props" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.6\build\Xamarin.Build.Download.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
@@ -68,7 +68,7 @@
     <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Distribution: Instituto de la Juventud Guanajuatense (E23HCJ67BM)</CodesignKey>
     <DeviceSpecificBuild>true</DeviceSpecificBuild>
     <MtouchDebug>true</MtouchDebug>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
@@ -79,7 +79,7 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
-    <CodesignProvision>Guanajoven DEVELOPMENT</CodesignProvision>
+    <CodesignProvision>Guanajoven ADHOC</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -144,12 +144,6 @@
     <Reference Include="ZXing.Net.Mobile.Forms.iOS">
       <HintPath>..\packages\ZXing.Net.Mobile.Forms.2.2.9\lib\Xamarin.iOS10\ZXing.Net.Mobile.Forms.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="BTProgressHUD">
-      <HintPath>..\Components\btprogresshud-1.20\lib\ios-unified\BTProgressHUD.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Mobile">
-      <HintPath>..\Components\xamarin.mobile-0.7.7\lib\ios-unified\Xamarin.Mobile.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Forms.Core">
       <HintPath>..\packages\Xamarin.Forms.2.3.4.247\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
@@ -204,24 +198,6 @@
     <Reference Include="Plugin.Geolocator">
       <HintPath>..\packages\Xam.Plugin.Geolocator.4.0.1\lib\Xamarin.iOS10\Plugin.Geolocator.dll</HintPath>
     </Reference>
-    <Reference Include="Firebase.Core">
-      <HintPath>..\packages\Xamarin.Firebase.iOS.Core.3.4.6\lib\Xamarin.iOS10\Firebase.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.InstanceID">
-      <HintPath>..\packages\Xamarin.Firebase.iOS.InstanceID.1.0.8.1\lib\Xamarin.iOS10\Firebase.InstanceID.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.Analytics">
-      <HintPath>..\packages\Xamarin.Firebase.iOS.Analytics.3.6.0.2\lib\Xamarin.iOS10\Firebase.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.CloudMessaging">
-      <HintPath>..\packages\Xamarin.Firebase.iOS.CloudMessaging.1.2.1.3\lib\Xamarin.iOS10\Firebase.CloudMessaging.dll</HintPath>
-    </Reference>
-    <Reference Include="Plugin.FirebasePushNotification.Abstractions">
-      <HintPath>..\packages\Plugin.FirebasePushNotification.1.0.4\lib\Xamarin.iOS10\Plugin.FirebasePushNotification.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Plugin.FirebasePushNotification">
-      <HintPath>..\packages\Plugin.FirebasePushNotification.1.0.4\lib\Xamarin.iOS10\Plugin.FirebasePushNotification.dll</HintPath>
-    </Reference>
     <Reference Include="HockeySDK">
       <HintPath>..\packages\HockeySDK.Xamarin.4.1.5\lib\Xamarin.iOS10\HockeySDK.dll</HintPath>
     </Reference>
@@ -239,6 +215,30 @@
     </Reference>
     <Reference Include="Xamarin.Auth.XamarinForms">
       <HintPath>..\packages\Xamarin.Auth.XamarinForms.1.5.0.3\lib\Xamarin.iOS10\Xamarin.Auth.XamarinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Core">
+      <HintPath>..\packages\Xamarin.Firebase.iOS.Core.3.4.6\lib\Xamarin.iOS10\Firebase.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.InstanceID">
+      <HintPath>..\packages\Xamarin.Firebase.iOS.InstanceID.1.0.8.1\lib\Xamarin.iOS10\Firebase.InstanceID.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Analytics">
+      <HintPath>..\packages\Xamarin.Firebase.iOS.Analytics.3.6.0.2\lib\Xamarin.iOS10\Firebase.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.CloudMessaging">
+      <HintPath>..\packages\Xamarin.Firebase.iOS.CloudMessaging.1.2.1.3\lib\Xamarin.iOS10\Firebase.CloudMessaging.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.FirebasePushNotification.Abstractions">
+      <HintPath>..\packages\Plugin.FirebasePushNotification.1.0.7\lib\Xamarin.iOS10\Plugin.FirebasePushNotification.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.FirebasePushNotification">
+      <HintPath>..\packages\Plugin.FirebasePushNotification.1.0.7\lib\Xamarin.iOS10\Plugin.FirebasePushNotification.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Mobile">
+      <HintPath>..\Components\xamarin.mobile-0.7.7\lib\ios-unified\Xamarin.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="BTProgressHUD">
+      <HintPath>..\Components\btprogresshud-1.20\lib\ios-unified\BTProgressHUD.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -259,6 +259,19 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%403x.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-72x72%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-72x72%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%401x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-40%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-44%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-86%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-98%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-29%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-29%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-24%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-27.5%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -437,6 +450,7 @@
     <BundleResource Include="Resources\letras_codigo_guanajoven.png" />
     <BundleResource Include="Resources\background_codigo_guanajoven.PNG" />
     <BundleResource Include="GoogleService-Info.plist" />
+    <BundleResource Include="Resources\gobiernoestado.jpg" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="xamarin.mobile">
@@ -466,7 +480,7 @@
   <Import Project="..\packages\Fody.2.0.6\build\netstandard1.4\Fody.targets" Condition="Exists('..\packages\Fody.2.0.6\build\netstandard1.4\Fody.targets')" />
   <Import Project="..\packages\Realm.Database.1.5.0\build\Realm.Database.targets" Condition="Exists('..\packages\Realm.Database.1.5.0\build\Realm.Database.targets')" />
   <Import Project="..\packages\Realm.1.5.0\build\Realm.targets" Condition="Exists('..\packages\Realm.1.5.0\build\Realm.targets')" />
-  <Import Project="..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets')" />
+  <Import Project="..\packages\Xamarin.Build.Download.0.4.6\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.6\build\Xamarin.Build.Download.targets')" />
   <Import Project="..\packages\Xamarin.Firebase.iOS.Core.3.4.6\build\Xamarin.Firebase.iOS.Core.targets" Condition="Exists('..\packages\Xamarin.Firebase.iOS.Core.3.4.6\build\Xamarin.Firebase.iOS.Core.targets')" />
   <Import Project="..\packages\Xamarin.Firebase.iOS.InstanceID.1.0.8.1\build\Xamarin.Firebase.iOS.InstanceID.targets" Condition="Exists('..\packages\Xamarin.Firebase.iOS.InstanceID.1.0.8.1\build\Xamarin.Firebase.iOS.InstanceID.targets')" />
   <Import Project="..\packages\Xamarin.Firebase.iOS.Analytics.3.6.0.2\build\Xamarin.Firebase.iOS.Analytics.targets" Condition="Exists('..\packages\Xamarin.Firebase.iOS.Analytics.3.6.0.2\build\Xamarin.Firebase.iOS.Analytics.targets')" />

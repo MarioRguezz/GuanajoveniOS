@@ -4,19 +4,22 @@
       <File FileName="iOS/Info.plist" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/marioalbertonegreterodriguez/Projects/Guanajoven/Guanajoven/ContentPages/Login/SignUpPage.xaml.cs" relfile="Guanajoven/ContentPages/Login/SignUpPage.xaml.cs" line="61" column="1" />
-      <Breakpoint file="/Users/marioalbertonegreterodriguez/Projects/Guanajoven/Guanajoven/Forms/ContentPages/Home/MasterHomePage.xaml.cs" relfile="Guanajoven/Forms/ContentPages/Home/MasterHomePage.xaml.cs" line="136" column="1" />
-      <Breakpoint file="/Users/marioalbertonegreterodriguez/Projects/Guanajoven/Guanajoven/Forms/ContentPages/Home/MasterHomePage.xaml.cs" relfile="Guanajoven/Forms/ContentPages/Home/MasterHomePage.xaml.cs" line="97" column="1" />
+      <Breakpoint file="/Users/marioalbertonegreterodriguez/Desktop/GuanajoveniOS/Guanajoven/Guanajoven/ContentPages/Login/SignUpPage.xaml.cs" relfile="Guanajoven/ContentPages/Login/SignUpPage.xaml.cs" line="61" column="1" />
+      <Breakpoint file="/Users/marioalbertonegreterodriguez/Desktop/GuanajoveniOS/Guanajoven/Guanajoven/Forms/ContentPages/Home/MasterHomePage.xaml.cs" relfile="Guanajoven/Forms/ContentPages/Home/MasterHomePage.xaml.cs" line="136" column="1" />
+      <Breakpoint file="/Users/marioalbertonegreterodriguez/Desktop/GuanajoveniOS/Guanajoven/Guanajoven/Forms/ContentPages/Home/MasterHomePage.xaml.cs" relfile="Guanajoven/Forms/ContentPages/Home/MasterHomePage.xaml.cs" line="97" column="1" />
+      <Breakpoint file="/Users/marioalbertonegreterodriguez/Desktop/GuanajoveniOS/Guanajoven/Guanajoven/App.xaml.cs" relfile="Guanajoven/App.xaml.cs" line="96" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="Guanajoven/ContentPages/Data/Services/ClientGuanajoven.cs" line="478" offsetX="463" offsetY="6080" expression="response" liveUpdate="False" />
+    <Watch file="Guanajoven/Data/Services/ClientGuanajoven.cs" line="617" offsetX="828" offsetY="8208" expression="method" liveUpdate="False" />
+    <Watch file="Guanajoven/App.xaml.cs" line="233" offsetX="375" offsetY="3664" expression="DeviceToken" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Guanajoven.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget">
+  <MonoDevelop.Ide.ItemProperties.Guanajoven.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D516CC0F-1EEB-4194-BF63-504EF0E6C504">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="Y8YK9HJZHZ" TeamId="E23HCJ67BM" />
   </MonoDevelop.Ide.ItemProperties.Guanajoven.iOS>
 </Properties>

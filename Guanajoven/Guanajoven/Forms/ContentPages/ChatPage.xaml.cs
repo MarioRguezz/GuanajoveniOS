@@ -117,62 +117,69 @@ namespace Guanajoven
 			ScrollToLast(true);
 		}
 
-
-
-	async void EnviarMensaje(object sender, System.EventArgs e)
-	{
-
-		if (!string.IsNullOrEmpty(_entryMensaje.Text))
+		async void MostrarDialogoMensaje(object sender, System.EventArgs e)
 		{
-			var now = DateTime.Now;
+			_dialogWriteMessage.IsVisible = true;
+			await _dialogWriteMessage.FadeTo(1, 200, Easing.SinIn);
+		}
 
-			var user = PropertiesManager.GetUserInfo();
-			var me = new Mensaje();
-			me.api_token = user.data.api_token;
-			me.mensaje = _entryMensaje.Text;
-			ShowProgress("Enviando");
-			var message = await ClientGuanajoven.EnviarChat(me);
-			HideProgress();
 
-			var isTrue = ClientGuanajoven.Data(message);
-			if (isTrue == "true")
+		async void EnviarMensaje(object sender, System.EventArgs e)
+		{
+
+			if (!string.IsNullOrEmpty(_entryMensaje.Text))
 			{
-				_items.Add(new ChatModel()
+				var now = DateTime.Now;
+
+				var user = PropertiesManager.GetUserInfo();
+				var me = new Mensaje();
+				me.api_token = user.data.api_token;
+				me.mensaje = _entryMensaje.Text;
+				ShowProgress("Enviando");
+				var message = await ClientGuanajoven.EnviarChat(me);
+				HideProgress();
+
+				var isTrue = ClientGuanajoven.Data(message);
+				if (isTrue == "true")
 				{
-					mensaje = _entryMensaje.Text,
-					envia_usuario = 1,
-					created_at = now.ToString("u").Substring(0, now.ToString("u").Length - 1),
-				});
-				ScrollToLast(false);
-				_entryMensaje.Text = "";
+					_items.Add(new ChatModel()
+					{
+						mensaje = _entryMensaje.Text,
+						envia_usuario = 1,
+						created_at = now.ToString("u").Substring(0, now.ToString("u").Length - 1),
+					});
+					ScrollToLast(false);
+					_entryMensaje.Text = "";
+					await _dialogWriteMessage.FadeTo(0,200, Easing.SinOut);
+					_dialogWriteMessage.IsVisible = false;
+				}
+
+
+
 			}
 
 
-
 		}
 
 
-	}
+		async void CloseClicked(object sender, System.EventArgs e)
 
-
-	async void CloseClicked(object sender, System.EventArgs e)
-
-	{
-		var image = sender as Image;
-		image.Opacity = 0.6;
-		image.FadeTo(1);
-		//RootPage.IsPresented = true;
-		await Navigation.PushAsync(new AdvertisingPage());
-		//await Navigation.PopAsync()		
-	}
-
-	void ScrollToLast(bool animated = true)
-	{
-		if (_items != null)
 		{
-			_listView.ScrollTo(_items.Last(), ScrollToPosition.End, animated);
+			var image = sender as Image;
+			image.Opacity = 0.6;
+			image.FadeTo(1);
+			RootPage.IsPresented = true;
+			//await Navigation.PushAsync(new AdvertisingPage());
+			//await Navigation.PopAsync()		
 		}
 
+		void ScrollToLast(bool animated = true)
+		{
+			if (_items != null)
+			{
+				_listView.ScrollTo(_items.Last(), ScrollToPosition.End, animated);
+			}
+
+		}
 	}
-}
 }

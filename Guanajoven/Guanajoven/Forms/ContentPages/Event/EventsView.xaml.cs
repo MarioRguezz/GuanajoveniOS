@@ -47,9 +47,26 @@ namespace Guanajoven
 			{
 				dateToSend = PropertiesManager.GetDateEvent();
 			}
+			if (PropertiesManager.IsFirstDateEventTrue())
+			{
+				PropertiesManager.SaveFirstEventDate(1);
+			}
+			else
+			{
+				PropertiesManager.SaveFirstEventDate(PropertiesManager.GetFirstDataEvent() + 1);
+			}
 			CheckConnection();
 			ShowProgress("Validando");
-			var times = dateToSend.ToString("yyyy-MM-dd HH:MM:ss");
+			String times = "";
+			if (PropertiesManager.GetFirstDataEvent() > 1)
+			{
+				times = dateToSend.ToString("yyyy-MM-dd HH:MM:ss");
+
+			}
+			else
+			{
+				times = "0000-00-00 00:00:00";
+			}
 			_events = await ClientGuanajoven.getEvents(times);
 			var eventos = App.CurrentApp.RealmInstance.All<Evento>().ToList();
 			if (_events != null && _events.Count > 0)
@@ -187,14 +204,14 @@ namespace Guanajoven
 		}
 
 
-		async void CloseClicked(object sender, System.EventArgs e)
+		async void MenuClicked(object sender, System.EventArgs e)
 
 		{
 			var image = sender as Image;
 			image.Opacity = 0.6;
 			image.FadeTo(1);
-			//RootPage.IsPresented = true;
-			await Navigation.PushAsync(new AdvertisingPage());
+			RootPage.IsPresented = true;
+			//await Navigation.PushAsync(new AdvertisingPage());
 			//await Navigation.PopAsync();
 		}
 

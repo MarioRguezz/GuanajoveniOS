@@ -5,9 +5,9 @@
 			<Image Source="modificarbackground.jpg" Scale="1.1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Aspect="AspectFill" />
 			<BoxView x:Name="Background">
 			</BoxView>
-			<StackLayout Grid.Row="0" Spacing="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="20,30,20,30">
+			<StackLayout Grid.Row="0" Spacing="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
 				<ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-					<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical">
+					<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical" Margin="20,30,20,30">
 						<Image Source="ic_menu_white_24dp.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start">
 							<Image.GestureRecognizers>
 								<TapGestureRecognizer Tapped="CloseClicked" />

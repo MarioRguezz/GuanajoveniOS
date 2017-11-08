@@ -19,12 +19,14 @@ namespace Guanajoven
 		DateTime now = DateTime.Parse(timeString);
 		int time = 0;
 		string id_evento = "";
+		Evento eventodetail = null;
 
 		bool chooseAddress;
 
 		public DetailEventPage(Evento evento)
 		{
 			InitializeComponent();
+			eventodetail = evento;
 			START_POINT = new Position(evento.latitud, evento.longitud);
 			Map.MoveToRegion(MapSpan.FromCenterAndRadius(START_POINT, START_DISTANCE));
 			Title = evento.titulo;
@@ -68,7 +70,7 @@ namespace Guanajoven
 			if (time == 0)
 			{
 
-				var posicion = await ClientGuanajoven.InteresaEvento("", "");
+				var posicion = await ClientGuanajoven.InteresaEvento(PropertiesManager.GetUserInfo().data.api_token, eventodetail.id_evento+"");
 				ShowProgress(IProgressType.LogedIn);
 				await Task.Delay(600);
 				HideProgress();

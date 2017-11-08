@@ -137,9 +137,26 @@ async void getCalls()
 			{
 				dateToSend = PropertiesManager.GetDataRegion();
 			}
+			if (PropertiesManager.IsDateFirstRegionTrue())
+			{
+				PropertiesManager.SaveFirstRegionDate(1);
+			}
+			else
+			{
+				PropertiesManager.SaveFirstRegionDate(PropertiesManager.GetFirstDataRegion() + 1);
+			}
 			CheckConnection();
 			ShowProgress("Validando");
-			var times = dateToSend.ToString("yyyy-MM-dd HH:MM:ss");
+			String times = "";
+			if (PropertiesManager.GetFirstDataRegion() > 1)
+			{
+				 times = dateToSend.ToString("yyyy-MM-dd HH:MM:ss");
+
+			}
+			else
+			{
+				 times = "0000-00-00 00:00:00";
+			}
 			_regionSer = await ClientGuanajoven.getRegion(times);
 			var regiones = App.CurrentApp.RealmInstance.All<Region>().ToList();
 			if (_regionSer != null && _regionSer.Count > 0)
@@ -209,7 +226,7 @@ async void getCalls()
 				{
 					foreach (var _evento in Mergeregiones)
 					{
-					App.CurrentApp.RealmInstance.RemoveRange(App.CurrentApp.RealmInstance.All<Region>().Where(x => x.id_region == _evento.id_region));
+						App.CurrentApp.RealmInstance.RemoveRange(App.CurrentApp.RealmInstance.All<Region>().Where(x => x.id_region == _evento.id_region));
 					}
 
 					foreach (var item in Mergeregiones)

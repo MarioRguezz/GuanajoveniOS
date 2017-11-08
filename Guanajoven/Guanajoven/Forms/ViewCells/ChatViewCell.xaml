@@ -5,7 +5,7 @@
 			<Frame x:Name="_frame" HasShadow="false"  Padding="4" Margin="8" OutlineColor="#989898" WidthRequest="280">
 			<StackLayout Spacing="5" Padding="10">
 				<Label x:Name="_mensaje" HorizontalOptions="FillAndExpand" TextColor="White" HorizontalTextAlignment="Start" />
-				<Label x:Name="_hora" HorizontalOptions="FillAndExpand" TextColor="White"  HorizontalTextAlignment="Start" FontAttributes="Bold"/>
+				<Label x:Name="_hora" FontSize="11" HorizontalOptions="FillAndExpand" TextColor="White"  HorizontalTextAlignment="Start" FontAttributes="Bold"/>
 			</StackLayout>
 		</Frame>
 		</Grid>

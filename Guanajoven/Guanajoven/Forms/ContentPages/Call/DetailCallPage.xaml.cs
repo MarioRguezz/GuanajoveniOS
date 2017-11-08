@@ -70,7 +70,8 @@ namespace Guanajoven
 			CheckConnection();
 			ShowProgress("Validando");
 			var user = PropertiesManager.GetUserInfo();
-			var response = await ClientGuanajoven.sendEmail(user.data.datos_usuario.id_usuario + "", id_convocatoria);
+			//var response = await ClientGuanajoven.sendEmail(user.data.datos_usuario.id_usuario + "", id_convocatoria);
+			var response = await ClientGuanajoven.sendEmail(user.data.api_token + "", id_convocatoria);
 
 			if (ValidateResponseRegister(response))
 			{
